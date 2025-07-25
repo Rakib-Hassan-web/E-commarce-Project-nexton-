@@ -40,6 +40,11 @@ let handelShow =(INFO)=>{
   navigate(`/Product/${INFO.id}` , )
 }
 
+
+const handlecart =()=>{
+console.log('hummm')
+}
+
 return (
 <>
 
@@ -67,7 +72,7 @@ return (
                 <Slider {...settings}>
                     {
                       product.map((item,i)=>(
-                        <Singleres key={i} Showdetails={()=>handelShow(item)} pimage={item.images[0]} pname={item.category.slug} pprice={item.price} pacce={item.title}/>
+                        <Singleres cartclick={()=>handlecart()} key={i} Showdetails={()=>handelShow(item)} pimage={item.images[0]} pname={item.category.slug} pprice={item.price} pacce={item.title}/>
                       ))
                     }  
                 </Slider>
