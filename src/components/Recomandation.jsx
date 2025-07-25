@@ -43,7 +43,7 @@ let handelShow =(INFO)=>{
 
 const handlecart =(data)=>{
 
-  const myArray =[]
+  const myArray = JSON.parse(localStorage.getItem('ProductKey')) ||  []
 
   myArray.push(data)
   localStorage.setItem( 'ProductKey' , JSON.stringify(myArray))

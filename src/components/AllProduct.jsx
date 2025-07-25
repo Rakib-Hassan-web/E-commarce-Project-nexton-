@@ -30,8 +30,15 @@ let handelShow =(Info)=>{
 }
 
 
-const handlecart =()=>{
-console.log('hummm2')
+
+// --------------local storage--------
+
+const handlecart =(data)=>{
+
+  const myArray = JSON.parse(localStorage.getItem('ProductKey')) ||  []
+
+  myArray.push(data)
+  localStorage.setItem( 'ProductKey' , JSON.stringify(myArray))
 }
 
 
@@ -45,7 +52,7 @@ return (
         <div className=' lg:flex mt-4 lg:flex-wrap justify-between items-center '>
             {
             currentItems.map((item,i)=>(
-            <Singleres key={i} cartclick={()=>handlecart()}  Showdetails={()=>handelShow(item)} className={'overflow-ellipsis'} pimage={item.images[0]} pname={item.category.slug}
+            <Singleres key={i} cartclick={()=>handlecart(item.id)}  Showdetails={()=>handelShow(item)} className={'overflow-ellipsis'} pimage={item.images[0]} pname={item.category.slug}
                 pprice={item.price} pacce={item.title } />
             ))
             }
