@@ -6,7 +6,7 @@ import { HiMiniStar } from 'react-icons/hi2';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 
-const ProductImageSlider = ({proImg}) => {
+const ProductImageSlider = () => {
   const [product, setProduct] = useState(null);
   const [currentImage, setCurrentImage] = useState('');
   const params = useParams();
@@ -17,7 +17,7 @@ const ProductImageSlider = ({proImg}) => {
       .then((res) => {
         setProduct(res.data);
         if (res.data.images && res.data.images.length > 0) {
-          setCurrentImage(res.data.images[0]); // প্রথম ছবি দেখাবে
+          setCurrentImage(res.data.images[0]); 
         }
       })
       .catch((error) => {
@@ -25,8 +25,7 @@ const ProductImageSlider = ({proImg}) => {
       });
   }, [params.ProductID]);
 
-  if (!product) return <p>Loading...</p>; // লোডিং অবস্থায় কিছু দেখাবে
-
+  if (!product) return <p>Founding.......</p>; 
   return (
     <section id='PRODUCT_PAGE' className="mt-10">
       <div className="container">
@@ -55,7 +54,7 @@ const ProductImageSlider = ({proImg}) => {
               />
             </div>
           </div>
-<h2>hi</h2>
+
           {/* Product Info */}
           <div>
             <div className="InfoBorder w-[460px] h-[463px] border-[#E5E7EB] border-1 p-[33px] rounded-[16px]">
@@ -85,6 +84,7 @@ const ProductImageSlider = ({proImg}) => {
                 </div>
               </div>
 
+<h1>hi</h1>
               {/* Quantity and Add to cart */}
               <div className="thirdRo flex items-center justify-between">
                 <div className="quentityBg w-[110px] bg-[#F8F8F8] rounded-full py-2 px-3 flex justify-between items-center">
