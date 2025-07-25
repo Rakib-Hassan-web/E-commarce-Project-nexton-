@@ -32,7 +32,7 @@ axios.get('https://api.escuelajs.co/api/v1/products')
 } ,[])
 
 
-product.length=1
+
 
 const navigate = useNavigate()
 
@@ -66,24 +66,8 @@ return (
  <div className="slider-container">
                 <Slider {...settings}>
                     {
-                      product.map((item)=>(
-                        <Singleres  Showdetails={()=>handelShow(item)} pimage={item.images[0]} pname={item.category.slug} pprice={item.price} pacce={item.title}/>
-                      ))
-                    }   {
-                      product.map((item)=>(
-                        <Singleres  Showdetails={()=>handelShow(item)} pimage={item.images[0]} pname={item.category.slug} pprice={item.price} pacce={item.title}/>
-                      ))
-                    }   {
-                      product.map((item)=>(
-                        <Singleres  Showdetails={()=>handelShow(item)} pimage={item.images[0]} pname={item.category.slug} pprice={item.price} pacce={item.title}/>
-                      ))
-                    }   {
-                      product.map((item)=>(
-                        <Singleres  Showdetails={()=>handelShow(item)} pimage={item.images[0]} pname={item.category.slug} pprice={item.price} pacce={item.title}/>
-                      ))
-                    }   {
-                      product.map((item)=>(
-                        <Singleres  Showdetails={()=>handelShow(item)} pimage={item.images[0]} pname={item.category.slug} pprice={item.price} pacce={item.title}/>
+                      product.map((item,i)=>(
+                        <Singleres key={i} Showdetails={()=>handelShow(item)} pimage={item.images[0]} pname={item.category.slug} pprice={item.price} pacce={item.title}/>
                       ))
                     }  
                 </Slider>

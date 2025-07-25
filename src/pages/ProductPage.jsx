@@ -84,7 +84,7 @@ const ProductImageSlider = () => {
                 </div>
               </div>
 
-<h1>hi</h1>
+
               {/* Quantity and Add to cart */}
               <div className="thirdRo flex items-center justify-between">
                 <div className="quentityBg w-[110px] bg-[#F8F8F8] rounded-full py-2 px-3 flex justify-between items-center">
