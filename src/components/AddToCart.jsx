@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import { RxCross1 } from 'react-icons/rx'
 import { Link } from 'react-router'
 
@@ -6,10 +7,25 @@ const AddToCart = ({closeCart , closeDiv}) => {
 
 
 
-    const localCart = JSON.parse(localStorage.getItem('ProductKey'))
+const localCart = JSON.parse(localStorage.getItem('ProductKey'))
 
 
-console.log(localCart)
+const [product , setprodect] =useState([])
+
+useEffect(()=>{
+
+axios.get('https://api.escuelajs.co/api/v1/products')
+.then((res)=>{setprodect(res.data)})
+
+.catch((error)=>{error})
+} ,[])
+ 
+const CartAllProduct =product.filter((item)=>{
+  return  localCart.includes(item.id)
+})
+
+
+console.log(CartAllProduct)
 
 return (
 <>
