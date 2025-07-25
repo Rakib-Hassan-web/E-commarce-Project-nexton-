@@ -48,16 +48,16 @@ return (
                 {
                     CartAll.map((item )=>(
 
-                <div className='flex  items-center justify-around  mt-5'>
+                <div key={item.id} className='flex  items-center justify-around  mt-5'>
                     <div className="singleProduct flex gap-4 items-center">
-                        <div className="productimg w-[50px] h-[50px] bg-praymary rounded-2xl">
-                            {/* image asbe */}
+                        <div className="productimg w-[70px] h-[70px]  rounded-3xl bg-praymary ">
+                           <img src={item.images[0]} alt="Productimage" className='rounded-3xl' />
                         </div>
 
-                        <h2 className='text-base text-second font-medium font-praymary'>ProductName</h2>
+                        <h2 className='text-base text-second font-medium font-praymary overflow-ellipsis'>{item.title}</h2>
                     </div>
 
-                    <div className="product_price text-md text-second font-medium font-praymary ">20$</div>
+                    <div className="product_price text-md text-second font-medium font-praymary ">{item.price}$</div>
 
                 </div>
                     ))
@@ -67,8 +67,8 @@ return (
             </div>
 
                 {/* -----------total_price------- */}
-                <div className="totalPrice flex items-center justify-around mt-4">
-                    <h2 className='product_price text-[23px] text-second font-medium font-praymary'>Total Price :
+                <div className="totalPrice flex items-center gap-59 mb-4">
+                    <h2 className='product_price text-[23px] text-second font-medium font-praymary pl-10'>Total Price :
                     </h2>
                     <h2 className='product_price text-[20px] text-second font-medium font-praymary'>160$</h2>
 
