@@ -1,7 +1,7 @@
 import React from 'react'
-import { HiStar } from 'react-icons/hi'
-import { IoCartOutline } from 'react-icons/io5'
-import { PiShoppingCartSimpleThin } from 'react-icons/pi'
+
+import { LuShoppingCart } from 'react-icons/lu'
+
 
 const Singleres = ({ pname , pprice , pimage ,prating , pacce , pdiscount ,Showdetails}) => {
 return (
@@ -10,12 +10,10 @@ return (
 {/* onClick={cartClick} */}
 
 
-  {/* <section id='recomandation'>
-
-    <div className="container"  */}
+ 
          <div className=' relative  h-[448px] w-[320px]'>
              
-               <button  className='w-[40px] h-[40px] bg-orange-400 rounded-full flex justify-center items-center text-2xl text-white font-bold absolute right-[10px] top-[10px] cursor-pointer hover:bg-primary duration-300 z-20'><PiShoppingCartSimpleThin /></button>
+               <button  className='w-[40px] h-[40px] bg-white rounded-full flex justify-center items-center text-2xl text-black font-bold absolute right-[20px] top-[30px] cursor-pointer hover:bg-praymary duration-[.4s] z-20 hover:text-white'><LuShoppingCart  /></button>
 
        
       <div className='w-[320px] h-[448px]  rounded-[16px]   ' onClick={Showdetails}>
@@ -50,12 +48,6 @@ return (
 
 
       </div>
-{/* 
-    </div>
-
-
-
-  </section> */}
 
 
 
