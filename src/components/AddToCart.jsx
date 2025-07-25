@@ -23,7 +23,7 @@ return (
                 <div className='cursor-pointer pr-6'>{closeCart}</div>
 
             </div>
-            <div className="allProuct  ">
+            <div className="allProuct   h-[610px]  overflow-y-scroll">
                 {/* -----------single product---------- */}
                 <div className='flex  items-center justify-around  mt-5'>
                     <div className="singleProduct flex gap-4 items-center">
@@ -127,6 +127,76 @@ return (
                     <div className="product_price text-md text-second font-medium font-praymary ">20$</div>
 
 
+                </div> {/* -----------single product---------- */}
+
+                <div className='flex  items-center justify-around  mt-6'>
+                    <div className="singleProduct flex gap-4 items-center">
+                        <div className="productimg w-[50px] h-[50px] bg-praymary rounded-2xl">
+                            {/* image asbe */}
+                        </div>
+
+                        <h2 className='text-base text-second font-medium font-praymary'>ProductName</h2>
+                    </div>
+
+                    <div className="product_price text-md text-second font-medium font-praymary ">20$</div>
+
+
+                </div> {/* -----------single product---------- */}
+
+                <div className='flex  items-center justify-around  mt-6'>
+                    <div className="singleProduct flex gap-4 items-center">
+                        <div className="productimg w-[50px] h-[50px] bg-praymary rounded-2xl">
+                            {/* image asbe */}
+                        </div>
+
+                        <h2 className='text-base text-second font-medium font-praymary'>ProductName</h2>
+                    </div>
+
+                    <div className="product_price text-md text-second font-medium font-praymary ">20$</div>
+
+
+                </div> {/* -----------single product---------- */}
+
+                <div className='flex  items-center justify-around  mt-6'>
+                    <div className="singleProduct flex gap-4 items-center">
+                        <div className="productimg w-[50px] h-[50px] bg-praymary rounded-2xl">
+                            {/* image asbe */}
+                        </div>
+
+                        <h2 className='text-base text-second font-medium font-praymary'>ProductName</h2>
+                    </div>
+
+                    <div className="product_price text-md text-second font-medium font-praymary ">20$</div>
+
+
+                </div> {/* -----------single product---------- */}
+
+                <div className='flex  items-center justify-around  mt-6'>
+                    <div className="singleProduct flex gap-4 items-center">
+                        <div className="productimg w-[50px] h-[50px] bg-praymary rounded-2xl">
+                            {/* image asbe */}
+                        </div>
+
+                        <h2 className='text-base text-second font-medium font-praymary'>ProductName</h2>
+                    </div>
+
+                    <div className="product_price text-md text-second font-medium font-praymary ">20$</div>
+
+
+                </div> {/* -----------single product---------- */}
+
+                <div className='flex  items-center justify-around  mt-6'>
+                    <div className="singleProduct flex gap-4 items-center">
+                        <div className="productimg w-[50px] h-[50px] bg-praymary rounded-2xl">
+                            {/* image asbe */}
+                        </div>
+
+                        <h2 className='text-base text-second font-medium font-praymary'>ProductName</h2>
+                    </div>
+
+                    <div className="product_price text-md text-second font-medium font-praymary ">20$</div>
+
+
                 </div>
                 {/* -----------single product---------- */}
 
@@ -143,9 +213,10 @@ return (
 
 
                 </div>
+            </div>
 
                 {/* -----------total_price------- */}
-                <div className="totalPrice flex items-center justify-around mt-14">
+                <div className="totalPrice flex items-center justify-around mt-4">
                     <h2 className='product_price text-[23px] text-second font-medium font-praymary'>Total Price :
                     </h2>
                     <h2 className='product_price text-[20px] text-second font-medium font-praymary'>160$</h2>
@@ -155,7 +226,6 @@ return (
                 <Link
                     className='w-full text-center bg-black mt-[5px] inline-block py-4 text-2xl text-white font-praymary font-semibold'>
                 Check Out</Link>
-            </div>
 
                         </div>
 
