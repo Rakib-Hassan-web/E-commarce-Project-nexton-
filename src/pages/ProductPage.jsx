@@ -55,7 +55,7 @@ const ProductImageSlider = ({proImg}) => {
               />
             </div>
           </div>
-
+<h2>hi</h2>
           {/* Product Info */}
           <div>
             <div className="InfoBorder w-[460px] h-[463px] border-[#E5E7EB] border-1 p-[33px] rounded-[16px]">
