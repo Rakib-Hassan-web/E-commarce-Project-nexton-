@@ -30,6 +30,12 @@ let handelShow =(Info)=>{
 }
 
 
+const handlecart =()=>{
+console.log('hummm2')
+}
+
+
+
 const start = (page - 1) * itemsPerPage;
 const currentItems = products.slice(start, start + itemsPerPage);
 const totalPages = Math.ceil(products.length / itemsPerPage);
@@ -39,7 +45,7 @@ return (
         <div className=' lg:flex mt-4 lg:flex-wrap justify-between items-center '>
             {
             currentItems.map((item,i)=>(
-            <Singleres key={i} Showdetails={()=>handelShow(item)} className={'overflow-ellipsis'} pimage={item.images[0]} pname={item.category.slug}
+            <Singleres key={i} cartclick={()=>handlecart()}  Showdetails={()=>handelShow(item)} className={'overflow-ellipsis'} pimage={item.images[0]} pname={item.category.slug}
                 pprice={item.price} pacce={item.title } />
             ))
             }

@@ -6,7 +6,7 @@ import { HiMiniStar } from 'react-icons/hi2';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 
-const ProductImageSlider = () => {
+const ProductImageSlider = (cartClick) => {
   const [product, setProduct] = useState(null);
   const [currentImage, setCurrentImage] = useState('');
   const params = useParams();

@@ -41,9 +41,14 @@ let handelShow =(INFO)=>{
 }
 
 
-const handlecart =()=>{
-console.log('hummm')
+const handlecart =(data)=>{
+
+  const myArray =[]
+
+  myArray.push(data)
+  localStorage.setItem( 'ProductKey' , JSON.stringify(myArray))
 }
+
 
 return (
 <>
@@ -57,29 +62,20 @@ return (
           you</span>
       </h2>
 
-      {/* <Slider {...settings}>
-        <div>
-          <div className=' lg:flex mt-5 lg:flex-wrap justify-between items-center'>
-            {
-            product.map((item)=>(
-            <Singleres Showdetails={handelShow} pimage={item.category.image} pname={item.category.slug} pprice={item.price} pacce={item.title} />
-            ))
-            }
-          </div>
-        </div> */}
+
 
  <div className="slider-container">
                 <Slider {...settings}>
                     {
                       product.map((item,i)=>(
-                        <Singleres cartclick={()=>handlecart()} key={i} Showdetails={()=>handelShow(item)} pimage={item.images[0]} pname={item.category.slug} pprice={item.price} pacce={item.title}/>
+                        <Singleres cartclick={()=>handlecart(item.id)} key={i} Showdetails={()=>handelShow(item)} pimage={item.images[0]} pname={item.category.slug} pprice={item.price} pacce={item.title}/>
                       ))
                     }  
                 </Slider>
             </div>
 
 
-{/* HandleCart={()=>HandleCart(item)} */}
+
 
 
       <div className='  mt-15'>
