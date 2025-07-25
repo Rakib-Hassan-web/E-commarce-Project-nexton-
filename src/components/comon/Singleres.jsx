@@ -13,7 +13,7 @@ return (
  
          <div className=' relative  h-[448px] w-[320px]'>
              
-               <button  onClick={cartclick} className='w-[40px] h-[40px] bg-white rounded-full flex justify-center items-center text-2xl text-black font-bold absolute right-[20px] top-[30px] cursor-pointer hover:bg-praymary duration-[.4s] z-20 hover:text-white'><LuShoppingCart  /></button>
+               <button  onClick={cartclick} className='w-[40px] h-[40px] bg-white rounded-full flex justify-center items-center text-2xl text-black font-bold absolute right-[20px] top-[30px] cursor-pointer hover:bg-praymary duration-[.4s] z-11 hover:text-white'><LuShoppingCart  /></button>
 
        
       <div className='w-[320px] h-[448px]  rounded-[16px]   ' onClick={Showdetails}>

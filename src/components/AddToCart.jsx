@@ -17,15 +17,15 @@ useEffect(()=>{
 axios.get('https://api.escuelajs.co/api/v1/products')
 .then((res)=>{setprodect(res.data)})
 
-.catch((error)=>{error})
+.catch((error)=>{console.log(error)})
 } ,[])
  
-const CartAllProduct =product.filter((item)=>{
-  return  localCart.includes(item.id)
+const CartAll =product.filter((item)=>{
+  return localCart.includes(item.id)
 })
 
 
-console.log(CartAllProduct)
+console.log(CartAll)
 
 return (
 <>
@@ -44,7 +44,10 @@ return (
 
             </div>
             <div className="allProuct   h-[610px]  overflow-y-scroll">
-                {/* -----------single product---------- */}
+
+                {
+                    CartAll.map((item )=>(
+
                 <div className='flex  items-center justify-around  mt-5'>
                     <div className="singleProduct flex gap-4 items-center">
                         <div className="productimg w-[50px] h-[50px] bg-praymary rounded-2xl">
@@ -57,182 +60,10 @@ return (
                     <div className="product_price text-md text-second font-medium font-praymary ">20$</div>
 
                 </div>
+                    ))
+                }
                 {/* -----------single product---------- */}
-
-                <div className='flex  items-center justify-around  mt-6'>
-                    <div className="singleProduct flex gap-4 items-center">
-                        <div className="productimg w-[50px] h-[50px] bg-praymary rounded-2xl">
-                            {/* image asbe */}
-                        </div>
-
-                        <h2 className='text-base text-second font-medium font-praymary'>ProductName</h2>
-                    </div>
-
-                    <div className="product_price text-md text-second font-medium font-praymary ">20$</div>
-
-
-                </div>
-
-                {/* -----------single product---------- */}
-
-                <div className='flex  items-center justify-around  mt-6'>
-                    <div className="singleProduct flex gap-4 items-center">
-                        <div className="productimg w-[50px] h-[50px] bg-praymary rounded-2xl">
-                            {/* image asbe */}
-                        </div>
-
-                        <h2 className='text-base text-second font-medium font-praymary'>ProductName</h2>
-                    </div>
-
-                    <div className="product_price text-md text-second font-medium font-praymary ">20$</div>
-
-
-                </div>
-                {/* -----------single product---------- */}
-
-                <div className='flex  items-center justify-around  mt-6'>
-                    <div className="singleProduct flex gap-4 items-center">
-                        <div className="productimg w-[50px] h-[50px] bg-praymary rounded-2xl">
-                            {/* image asbe */}
-                        </div>
-
-                        <h2 className='text-base text-second font-medium font-praymary'>ProductName</h2>
-                    </div>
-
-                    <div className="product_price text-md text-second font-medium font-praymary ">20$</div>
-
-
-                </div>
-                {/* -----------single product---------- */}
-
-                <div className='flex  items-center justify-around  mt-6'>
-                    <div className="singleProduct flex gap-4 items-center">
-                        <div className="productimg w-[50px] h-[50px] bg-praymary rounded-2xl">
-                            {/* image asbe */}
-                        </div>
-
-                        <h2 className='text-base text-second font-medium font-praymary'>ProductName</h2>
-                    </div>
-
-                    <div className="product_price text-md text-second font-medium font-praymary ">20$</div>
-
-
-                </div>
-                {/* -----------single product---------- */}
-
-                <div className='flex  items-center justify-around  mt-6'>
-                    <div className="singleProduct flex gap-4 items-center">
-                        <div className="productimg w-[50px] h-[50px] bg-praymary rounded-2xl">
-                            {/* image asbe */}
-                        </div>
-
-                        <h2 className='text-base text-second font-medium font-praymary'>ProductName</h2>
-                    </div>
-
-                    <div className="product_price text-md text-second font-medium font-praymary ">20$</div>
-
-
-                </div>
-                {/* -----------single product---------- */}
-
-                <div className='flex  items-center justify-around  mt-6'>
-                    <div className="singleProduct flex gap-4 items-center">
-                        <div className="productimg w-[50px] h-[50px] bg-praymary rounded-2xl">
-                            {/* image asbe */}
-                        </div>
-
-                        <h2 className='text-base text-second font-medium font-praymary'>ProductName</h2>
-                    </div>
-
-                    <div className="product_price text-md text-second font-medium font-praymary ">20$</div>
-
-
-                </div> {/* -----------single product---------- */}
-
-                <div className='flex  items-center justify-around  mt-6'>
-                    <div className="singleProduct flex gap-4 items-center">
-                        <div className="productimg w-[50px] h-[50px] bg-praymary rounded-2xl">
-                            {/* image asbe */}
-                        </div>
-
-                        <h2 className='text-base text-second font-medium font-praymary'>ProductName</h2>
-                    </div>
-
-                    <div className="product_price text-md text-second font-medium font-praymary ">20$</div>
-
-
-                </div> {/* -----------single product---------- */}
-
-                <div className='flex  items-center justify-around  mt-6'>
-                    <div className="singleProduct flex gap-4 items-center">
-                        <div className="productimg w-[50px] h-[50px] bg-praymary rounded-2xl">
-                            {/* image asbe */}
-                        </div>
-
-                        <h2 className='text-base text-second font-medium font-praymary'>ProductName</h2>
-                    </div>
-
-                    <div className="product_price text-md text-second font-medium font-praymary ">20$</div>
-
-
-                </div> {/* -----------single product---------- */}
-
-                <div className='flex  items-center justify-around  mt-6'>
-                    <div className="singleProduct flex gap-4 items-center">
-                        <div className="productimg w-[50px] h-[50px] bg-praymary rounded-2xl">
-                            {/* image asbe */}
-                        </div>
-
-                        <h2 className='text-base text-second font-medium font-praymary'>ProductName</h2>
-                    </div>
-
-                    <div className="product_price text-md text-second font-medium font-praymary ">20$</div>
-
-
-                </div> {/* -----------single product---------- */}
-
-                <div className='flex  items-center justify-around  mt-6'>
-                    <div className="singleProduct flex gap-4 items-center">
-                        <div className="productimg w-[50px] h-[50px] bg-praymary rounded-2xl">
-                            {/* image asbe */}
-                        </div>
-
-                        <h2 className='text-base text-second font-medium font-praymary'>ProductName</h2>
-                    </div>
-
-                    <div className="product_price text-md text-second font-medium font-praymary ">20$</div>
-
-
-                </div> {/* -----------single product---------- */}
-
-                <div className='flex  items-center justify-around  mt-6'>
-                    <div className="singleProduct flex gap-4 items-center">
-                        <div className="productimg w-[50px] h-[50px] bg-praymary rounded-2xl">
-                            {/* image asbe */}
-                        </div>
-
-                        <h2 className='text-base text-second font-medium font-praymary'>ProductName</h2>
-                    </div>
-
-                    <div className="product_price text-md text-second font-medium font-praymary ">20$</div>
-
-
-                </div>
-                {/* -----------single product---------- */}
-
-                <div className='flex  items-center justify-around  mt-6'>
-                    <div className="singleProduct flex gap-4 items-center">
-                        <div className="productimg w-[50px] h-[50px] bg-praymary rounded-2xl">
-                            {/* image asbe */}
-                        </div>
-
-                        <h2 className='text-base text-second font-medium font-praymary'>ProductName</h2>
-                    </div>
-
-                    <div className="product_price text-md text-second font-medium font-praymary ">20$</div>
-
-
-                </div>
+               
             </div>
 
                 {/* -----------total_price------- */}
