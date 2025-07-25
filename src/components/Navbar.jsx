@@ -46,10 +46,10 @@ return (
       </div>
 
 
-      <div className="nav_icons relative " id='nav_icons'>
+      <div className="nav_icons relative flex gap-1 items-center " id='nav_icons'>
 
-        <button className='user_icon text-2xl text-praymary  mr-[22px]' id='user_icon'>
-          <RiUserLine /></button>
+        <Link to={'/RegisterPage'} className='user_icon text-2xl text-praymary  mr-[22px]' id='user_icon'>
+          <RiUserLine /></Link>
 
         <button onClick={()=>setCart(!cart)} className='relative cursor-pointer'>
           <RiShoppingCart2Line className='text-[24px] text-Primary' />
