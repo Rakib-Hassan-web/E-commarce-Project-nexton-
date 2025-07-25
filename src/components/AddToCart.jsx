@@ -6,6 +6,10 @@ const AddToCart = ({closeCart , closeDiv}) => {
 
 
 
+    const localCart = JSON.parse(localStorage.getItem('ProductKey'))
+
+
+console.log(localCart)
 
 return (
 <>
