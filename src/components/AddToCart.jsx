@@ -20,12 +20,12 @@ axios.get('https://api.escuelajs.co/api/v1/products')
 .catch((error)=>{console.log(error)})
 } ,[])
 
-const CartAll =product.filter((item)=>{
-return localCart.includes(item.id)
+const CartAll =product?.filter((item)=>{
+return localCart?.includes(item.id)
 })
 
 
-const totalPrice =CartAll.reduce((sum , no)=>{
+const totalPrice =CartAll?.reduce((sum , no)=>{
     return sum + no.price
 },0)
 
@@ -52,17 +52,17 @@ return (
                 {
                 CartAll.map((item )=>(
 
-                <div key={item.id} className='flex  items-center justify-around  mt-5'>
+                <div key={item?.id} className='flex  items-center justify-around  mt-5'>
                     <div className="singleProduct flex gap-4 items-center pl-10">
                         <div className="productimg w-[70px] h-[70px]  rounded-3xl bg-praymary mr-4 ">
-                            <img src={item.images[0]} alt="Productimage" className='rounded-3xl ' />
+                            <img src={item?.images[0]} alt="Productimage" className='rounded-3xl ' />
                         </div>
 
                         <h2 id='catrproname' className=' w-[200px] text-base text-second font-medium font-praymary overflow-ellipsis '>{item.title}
                         </h2>
                     </div>
 
-                    <div className="product_price text-md text-second font-medium font-praymary ">{item.price}$</div>
+                    <div className="product_price text-md text-second font-medium font-praymary ">{item?.price}$</div>
 
                 </div>
                 ))

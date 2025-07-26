@@ -15,9 +15,7 @@ import { RxCross1 } from 'react-icons/rx';
 
 const Navbar = () => {
 
-// let handlecart =()=>{
-// AddToCart.style= 'display:block'
-// }
+const localProduct =JSON.parse(localStorage.getItem('ProductKey'))
 
 const [cart ,setCart]= useState(true)
 
@@ -55,7 +53,7 @@ return (
           <RiShoppingCart2Line className='text-[24px] text-Primary' />
           <div
             className='absolute right-[-7px] top-[-7px] bg-[#0EA5E9] h-[20px] w-[20px] flex items-center justify-center rounded-full text-[#fff] text-[12px]'>
-            3</div>
+           </div>
         </button>
       </div>
 
