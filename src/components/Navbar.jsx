@@ -53,7 +53,7 @@ return (
           <RiShoppingCart2Line className='text-[24px] text-Primary' />
           <div
             className='absolute right-[-7px] top-[-7px] bg-[#0EA5E9] h-[20px] w-[20px] flex items-center justify-center rounded-full text-[#fff] text-[12px]'>
-           </div>
+           {localProduct? localProduct.length : 0 }</div>
         </button>
       </div>
 
