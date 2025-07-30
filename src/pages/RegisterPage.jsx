@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { LuEye } from 'react-icons/lu'
+import { LuEye, LuEyeOff } from 'react-icons/lu'
 import { Form, Link } from 'react-router'
 
 
@@ -87,7 +87,15 @@ const RegisterPage = () => {
                         <p className='text-base font-semibold text-second text-left'>Password</p>
                         <p className='text-red-600 font-poppins'>{passError}</p>
                         <input onChange={(e)=>{setPass(e.target.value),setPassError('')}}  className='w-full border border-[#E5E7EB] rounded-[12px] h-[43px] px-5 outline-none mt-2' type={showpass? 'text' : 'password'} />
-                    <LuEye className='text-xl cursor-pointer absolute top-11 right-5' onClick={()=>setshowpass(!showpass)}  />
+
+
+                        {
+                            showpass?
+
+                            <LuEyeOff  className='text-2xl cursor-pointer absolute top-11 right-5' onClick={()=>setshowpass(!showpass)}  />
+                            :
+                            <LuEye className='text-2xl cursor-pointer absolute top-11 right-5' onClick={()=>setshowpass(!showpass)}  />
+                        }
 
                     </div>
                     {/* -----Password again */}
