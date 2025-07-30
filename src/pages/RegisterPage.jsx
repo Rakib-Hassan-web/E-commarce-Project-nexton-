@@ -91,7 +91,7 @@ const RegisterPage = () => {
                 {/* -------Header-------- */}
                 <div><h2 className='text-[36px] font-semibold text-second text-center mb-[60px]'>Register</h2></div>
 
-                {/* -------Input Box-------- */}
+            hi    {/* -------Input Box-------- */}
                 <div className='flex flex-col gap-[24px]'>
 
 
