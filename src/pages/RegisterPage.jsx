@@ -21,6 +21,9 @@ const RegisterPage = () => {
           if(!email){
             setEmailError('Enter Your Email')
         }
+          if(!username){
+            setusernameError('Enter Your full Name')
+        }
         else if(!pass){
             setPassError('Please enter your password')
         }
@@ -56,7 +59,7 @@ const RegisterPage = () => {
 {/* -----------username------------ */}
  <div>
                         <p className='text-base font-semibold text-second text-left'>User Name</p>
-                        <p className='text-red-600 font-poppins'>{emailError}</p>
+                        <p className='text-red-600 font-poppins'>{usernameError}</p>
                         <input onChange={(e)=>{setusername(e.target.value),setusernameError('')}} className='w-full border border-BorderCol rounded-[12px] h-[43px] px-5 outline-none mt-2' placeholder='Enter Your Full Name' type="email" />
                     </div>
 
