@@ -36,9 +36,9 @@ return (
 
     <section id='addTOCart'>
 
-        <div onClick={closeDiv} className='w-full h-screen bg-[#00000046] absolute top-0 left-0 z-12'></div>
+        <div onClick={closeDiv} className='w-full h-screen bg-[#00000046] absolute top-0 left-0 z-20'></div>
 
-        <div className='bg-white z-90 pt-18 w-[500px] h-screen absolute top-0 right-0'>
+        <div className='bg-white  z-30 pt-18 w-[500px] h-screen absolute top-0 right-0'>
             {/* -------------cart Heading------------ */}
             <div className="Cart_heading flex  items-center  justify-around gap-55">
                 <h2 className='text-[30px] font-semibold font-praymary text-second pl-5'>AddToCart</h2>

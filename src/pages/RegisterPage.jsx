@@ -3,8 +3,8 @@ import { Form, Link } from 'react-router'
 
 
 const RegisterPage = () => {
-   const [emailError,setEmailError] = useState('')
     const[email,setEmail] = useState('')
+   const [emailError,setEmailError] = useState('')
 
     const [pass,setPass] =useState ('')
     const[passError,setPassError]=useState('')
@@ -12,9 +12,26 @@ const RegisterPage = () => {
     const [passAgain,setPassAgain]=useState('')
     const [againError,setAgainError] = useState('')
 
-    const handleSubmit = (behave)=>{
+    const handleSubmit = (mail)=>{
         
+          if(!email){
+            setEmailError('Enter Your Email')
         }
+        else if(!pass){
+            setPassError('Please enter your password')
+        }
+        else{
+           
+        }
+        if(!passAgain ){
+            setAgainError('Password does not be Empty')
+        }
+        else if(passAgain != pass){
+            setAgainError('Password does not match')
+
+        }
+        }
+     
        
   return (
     <>
@@ -32,21 +49,21 @@ const RegisterPage = () => {
                 <div className='flex flex-col gap-[24px]'>
                     {/* -----Email  */}
                     <div>
-                        <p className='text-base font-semibold text-second'>Email</p>
+                        <p className='text-base font-semibold text-second text-left'>Email</p>
                         <p className='text-red-600 font-poppins'>{emailError}</p>
-                        <input  className='w-full border border-BorderCol rounded-[12px] h-[43px] px-5 outline-none mt-2' placeholder='example@example.com' type="email" />
+                        <input onChange={(e)=>{setEmail(e.target.value),setEmailError('')}} className='w-full border border-BorderCol rounded-[12px] h-[43px] px-5 outline-none mt-2' placeholder='example@example.com' type="email" />
                     </div>
                     {/* -----Password  */}
                     <div>
-                        <p className='text-base font-semibold text-second'>Password</p>
+                        <p className='text-base font-semibold text-second text-left'>Password</p>
                         <p className='text-red-600 font-poppins'>{passError}</p>
-                        <input className='w-full border border-BorderCol rounded-[12px] h-[43px] px-5 outline-none mt-2' type="password" />
+                        <input onChange={(e)=>{setPass(e.target.value),setPassError('')}}  className='w-full border border-BorderCol rounded-[12px] h-[43px] px-5 outline-none mt-2' type="password" />
                     </div>
                     {/* -----Password again */}
                     <div>
-                        <p className='text-base font-semibold text-second'>Password (Again)</p>
+                        <p className='text-base font-semibold text-second text-left'>Password (Again)</p>
                         <p className='text-red-600 font-poppins'>{againError}</p>
-                        <input  className='w-full border border-BorderCol rounded-[12px] h-[43px] px-5 outline-none mt-2'type="password" />
+                        <input  onChange={(e)=>{setPassAgain(e.target.value),setAgainError('')}}  className='w-full border border-BorderCol rounded-[12px] h-[43px] px-5 outline-none mt-2'type="password" />
                     </div>
                 </div>
 
