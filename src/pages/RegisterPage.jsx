@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 import { LuEye, LuEyeOff } from 'react-icons/lu'
 import { Form, Link } from 'react-router'
@@ -27,6 +28,9 @@ const RegisterPage = () => {
 
     const [showpass ,setshowpass] =useState(false)
 
+    // --------loading---------
+    const [loading ,setloading]=useState(false)
+
 
 // ----------------handle button--------------------------
     const handleSubmit = (mail)=>{
@@ -50,17 +54,26 @@ const RegisterPage = () => {
         }
         else{
 
-        toast.success('Register Success', {
-         position: "top-right",
-         autoClose: 5000,
-hideProgressBar: false,
-closeOnClick: false,
-pauseOnHover: true,
-draggable: true,
-progress: undefined,
-theme: "dark",
-transition: Bounce,
-});
+            axios.post('https://api.escuelajs.co/api/v1/users/' ,{
+                  name: username,
+                   email,
+                    password:pass,
+                   avatar: "https://picsum.photos/800"
+                        })
+            .then ((res)=>console.log(res))
+            .catch((err)=>(console.log(err)))
+
+//         toast.success('Register Success', {
+//          position: "top-right",
+//          autoClose: 5000,
+// hideProgressBar: false,
+// closeOnClick: false,
+// pauseOnHover: true,
+// draggable: true,
+// progress: undefined,
+// theme: "dark",
+// transition: Bounce,
+// });
 
         }
         }
@@ -122,7 +135,17 @@ transition: Bounce,
 
                 {/* ------Submit Button------ */}
                 <div className='mt-[24px] flex flex-col gap-[24px]'>
-                    <button className='w-full bg-second rounded-full text-white py-[14px] cursor-pointer'>Continue</button>
+
+{
+    loading?   
+                    <button className='w-full bg-second rounded-full text-white py-[14px]  cursor-progress'>Continue</button>
+:
+                    <button className='w-full bg-second rounded-full text-white py-[14px] cursor-pointer '>Continue</button>
+
+}
+
+
+
                     <p className='text-Primary font-medium text-[14px] text-center'>OR</p>
                     <div>
                         <p className='text-Primary text-base font-normal text-center'>Already a member? <Link className='text-[#0EA5E9]' to={'/LoginPage'}>Login</Link></p>
