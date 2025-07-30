@@ -64,21 +64,24 @@ const RegisterPage = () => {
             .then ((res)=>{
                 console.log(res)
               setloading(false)
+                      toast.success('Register Success', {
+         position: "top-right",
+         autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "dark",
+transition: Bounce,
+});
             }
                    )
-            .catch((err)=>(console.log(err)))
+            .catch((err)=>{console.log(err)
+                setloading(false)
+            })
 
-//         toast.success('Register Success', {
-//          position: "top-right",
-//          autoClose: 5000,
-// hideProgressBar: false,
-// closeOnClick: false,
-// pauseOnHover: true,
-// draggable: true,
-// progress: undefined,
-// theme: "dark",
-// transition: Bounce,
-// });
+
 
         }
         }
