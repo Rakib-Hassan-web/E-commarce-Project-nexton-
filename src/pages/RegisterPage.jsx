@@ -39,15 +39,18 @@ const RegisterPage = () => {
         else if(!pass){
             setPassError('Please enter your password')
         }
-        else{
-           
-        }
+    
         if(!passAgain ){
             setAgainError('Password does not be Empty')
         }
         else if(passAgain != pass){
             setAgainError('Password does not match')
 
+        }
+        else{
+
+
+            
         }
         }
      
