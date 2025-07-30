@@ -63,7 +63,7 @@ const RegisterPage = () => {
                         })
             .then ((res)=>{
                 console.log(res)
-              
+              setloading(false)
             }
                    )
             .catch((err)=>(console.log(err)))
