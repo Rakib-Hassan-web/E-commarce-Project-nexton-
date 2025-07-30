@@ -9,6 +9,7 @@ import DetailPage from './pages/DetailPage'
 import ProductPage from './pages/ProductPage'
 import RegisterPage from './pages/RegisterPage'
 import LoginPage from './pages/LoginPage'
+  import { ToastContainer } from 'react-toastify';
 
 
 function App() {
@@ -36,6 +37,7 @@ const myroute = createBrowserRouter(createRoutesFromElements(
 return (
 <>
 
+<ToastContainer/>
 
   <RouterProvider router={myroute} />
 </>

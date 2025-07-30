@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { LuEye, LuEyeOff } from 'react-icons/lu'
 import { Form, Link } from 'react-router'
+import { Bounce, toast } from 'react-toastify'
 
 
 const RegisterPage = () => {
@@ -49,8 +50,18 @@ const RegisterPage = () => {
         }
         else{
 
+        toast.success('Register Success', {
+         position: "top-right",
+         autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "dark",
+transition: Bounce,
+});
 
-            
         }
         }
      
@@ -75,7 +86,7 @@ const RegisterPage = () => {
  <div>
                         <p className='text-base font-semibold text-second text-left'>User Name</p>
                         <p className='text-red-600 font-poppins'>{usernameError}</p>
-                        <input onChange={(e)=>{setusername(e.target.value),setusernameError('')}} className='w-full border border-[#E5E7EB] rounded-[12px] h-[43px] px-5 outline-none mt-2' placeholder='Enter Your Full Name' type="email" />
+                        <input onChange={(e)=>{setusername(e.target.value),setusernameError('')}} className='w-full border border-[#E5E7EB] rounded-[12px] h-[43px] px-5 outline-none mt-2' placeholder='Enter Your Full Name' type="text" />
                     </div>
 
 
