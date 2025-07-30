@@ -72,7 +72,7 @@ const RegisterPage = () => {
  <div>
                         <p className='text-base font-semibold text-second text-left'>User Name</p>
                         <p className='text-red-600 font-poppins'>{usernameError}</p>
-                        <input onChange={(e)=>{setusername(e.target.value),setusernameError('')}} className='w-full border border-BorderCol rounded-[12px] h-[43px] px-5 outline-none mt-2' placeholder='Enter Your Full Name' type="email" />
+                        <input onChange={(e)=>{setusername(e.target.value),setusernameError('')}} className='w-full border border-[#E5E7EB] rounded-[12px] h-[43px] px-5 outline-none mt-2' placeholder='Enter Your Full Name' type="email" />
                     </div>
 
 
@@ -80,23 +80,21 @@ const RegisterPage = () => {
                     <div>
                         <p className='text-base font-semibold text-second text-left'>Email</p>
                         <p className='text-red-600 font-poppins'>{emailError}</p>
-                        <input onChange={(e)=>{setEmail(e.target.value),setEmailError('')}} className='w-full border border-BorderCol rounded-[12px] h-[43px] px-5 outline-none mt-2' placeholder='example@example.com' type="email" />
+                        <input onChange={(e)=>{setEmail(e.target.value),setEmailError('')}} className='w-full border border-[#E5E7EB] outline-none  rounded-[12px] h-[43px] px-5  mt-2' placeholder='example@example.com' type="email" />
                     </div>
                     {/* -----Password  */}
-                 
-                    <LuEye className='3xl cursor-pointer' onClick={()=>setshowpass(!showpass)}  />
-                        
-
-                    <div>
+                    <div className=' relative'>
                         <p className='text-base font-semibold text-second text-left'>Password</p>
                         <p className='text-red-600 font-poppins'>{passError}</p>
-                        <input onChange={(e)=>{setPass(e.target.value),setPassError('')}}  className='w-full border border-BorderCol rounded-[12px] h-[43px] px-5 outline-none mt-2' type={showpass? 'text' : 'password'} />
+                        <input onChange={(e)=>{setPass(e.target.value),setPassError('')}}  className='w-full border border-[#E5E7EB] rounded-[12px] h-[43px] px-5 outline-none mt-2' type={showpass? 'text' : 'password'} />
+                    <LuEye className='text-xl cursor-pointer absolute top-11 right-5' onClick={()=>setshowpass(!showpass)}  />
+
                     </div>
                     {/* -----Password again */}
                     <div>
                         <p className='text-base font-semibold text-second text-left'>Password (Again)</p>
                         <p className='text-red-600 font-poppins'>{againError}</p>
-                        <input  onChange={(e)=>{setPassAgain(e.target.value),setAgainError('')}}  className='w-full border border-BorderCol rounded-[12px] h-[43px] px-5 outline-none mt-2'type="password" />
+                        <input  onChange={(e)=>{setPassAgain(e.target.value),setAgainError('')}}  className='w-full border border-[#E5E7EB] rounded-[12px] h-[43px] px-5 outline-none mt-2'type="password" />
                     </div>
                 </div>
 
