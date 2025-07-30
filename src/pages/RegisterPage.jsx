@@ -9,6 +9,10 @@ const RegisterPage = () => {
     const [pass,setPass] =useState ('')
     const[passError,setPassError]=useState('')
 
+        const [username,setusername] =useState ('')
+    const[usernameError,setusernameError]=useState('')
+
+
     const [passAgain,setPassAgain]=useState('')
     const [againError,setAgainError] = useState('')
 
@@ -47,6 +51,16 @@ const RegisterPage = () => {
 
                 {/* -------Input Box-------- */}
                 <div className='flex flex-col gap-[24px]'>
+
+
+{/* -----------username------------ */}
+ <div>
+                        <p className='text-base font-semibold text-second text-left'>User Name</p>
+                        <p className='text-red-600 font-poppins'>{emailError}</p>
+                        <input onChange={(e)=>{setusername(e.target.value),setusernameError('')}} className='w-full border border-BorderCol rounded-[12px] h-[43px] px-5 outline-none mt-2' placeholder='Enter Your Full Name' type="email" />
+                    </div>
+
+
                     {/* -----Email  */}
                     <div>
                         <p className='text-base font-semibold text-second text-left'>Email</p>
