@@ -54,13 +54,18 @@ const RegisterPage = () => {
         }
         else{
 
+            setloading(true)
             axios.post('https://api.escuelajs.co/api/v1/users/' ,{
                   name: username,
                    email,
                     password:pass,
                    avatar: "https://picsum.photos/800"
                         })
-            .then ((res)=>console.log(res))
+            .then ((res)=>{
+                console.log(res)
+              
+            }
+                   )
             .catch((err)=>(console.log(err)))
 
 //         toast.success('Register Success', {
@@ -90,8 +95,7 @@ const RegisterPage = () => {
                <Form onSubmit={handleSubmit} className='w-[440px] text-center'>
                 {/* -------Header-------- */}
                 <div><h2 className='text-[36px] font-semibold text-second text-center mb-[60px]'>Register</h2></div>
-
-            hi    {/* -------Input Box-------- */}
+   {/* -------Input Box-------- */}
                 <div className='flex flex-col gap-[24px]'>
 
 
@@ -136,13 +140,13 @@ const RegisterPage = () => {
                 {/* ------Submit Button------ */}
                 <div className='mt-[24px] flex flex-col gap-[24px]'>
 
-{
-    loading?   
+                   {
+                     loading?   
                     <button className='w-full bg-second rounded-full text-white py-[14px]  cursor-progress'>Continue</button>
-:
+                      :
                     <button className='w-full bg-second rounded-full text-white py-[14px] cursor-pointer '>Continue</button>
 
-}
+                     }
 
 
 
