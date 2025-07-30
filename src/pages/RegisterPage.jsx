@@ -1,21 +1,33 @@
 import React, { useState } from 'react'
+import { LuEye } from 'react-icons/lu'
 import { Form, Link } from 'react-router'
 
 
 const RegisterPage = () => {
+    // ----------------email state---------------
     const[email,setEmail] = useState('')
    const [emailError,setEmailError] = useState('')
+
+
+//    ------------password state-=-----------------
 
     const [pass,setPass] =useState ('')
     const[passError,setPassError]=useState('')
 
+    // ------------------user name state---------------
         const [username,setusername] =useState ('')
     const[usernameError,setusernameError]=useState('')
 
-
+// -------again pass---------------------------------
     const [passAgain,setPassAgain]=useState('')
     const [againError,setAgainError] = useState('')
 
+    // -----------show pass --------------
+
+    const [showpass ,setshowpass] =useState(false)
+
+
+// ----------------handle button--------------------------
     const handleSubmit = (mail)=>{
         
           if(!email){
@@ -71,10 +83,14 @@ const RegisterPage = () => {
                         <input onChange={(e)=>{setEmail(e.target.value),setEmailError('')}} className='w-full border border-BorderCol rounded-[12px] h-[43px] px-5 outline-none mt-2' placeholder='example@example.com' type="email" />
                     </div>
                     {/* -----Password  */}
+                 
+                    <LuEye className='3xl cursor-pointer' onClick={()=>setshowpass(!showpass)}  />
+                        
+
                     <div>
                         <p className='text-base font-semibold text-second text-left'>Password</p>
                         <p className='text-red-600 font-poppins'>{passError}</p>
-                        <input onChange={(e)=>{setPass(e.target.value),setPassError('')}}  className='w-full border border-BorderCol rounded-[12px] h-[43px] px-5 outline-none mt-2' type="password" />
+                        <input onChange={(e)=>{setPass(e.target.value),setPassError('')}}  className='w-full border border-BorderCol rounded-[12px] h-[43px] px-5 outline-none mt-2' type={showpass? 'text' : 'password'} />
                     </div>
                     {/* -----Password again */}
                     <div>
