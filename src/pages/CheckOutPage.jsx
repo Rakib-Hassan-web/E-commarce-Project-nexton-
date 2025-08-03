@@ -205,8 +205,8 @@ return (
 
                 <div className='ITEM flex justify-between mt-[24px]'>
                     <div className='flex gap-[24px]'>
-                        <div className="Img w-[96px] h-[108px] bg-gray-400 rounded-[16px]">
-                            <img src="" alt="" />
+                        <div className="Img w-[106px] h-[105px] ">
+                            <img src={item.images[0]} alt="product image" className='w-full h-full  rounded-[16px]'  />
                         </div>
                         <div>
                             <h2 className='text-[16px] font-semibold font-praymary text-second '>Black Automatic Watch
