@@ -162,7 +162,7 @@ return (
 
             <div className='ORDER-SUMMARY w-[618px]'>
                 <div id='SUMMARY'>
-                    <h2 className='text-[24px] font-semibold font-poppins text-second mb-[20px]'>Order summary</h2>
+                    <h2 className='text-[24px] font-semibold font-praymary text-second mb-[20px]'>Order summary</h2>
                     <span className='w-full bg-[#E5E7EB] h-[1px] inline-block'></span>
                 </div>
 
@@ -170,9 +170,9 @@ return (
                     <div className='flex gap-[24px]'>
                         <div className="Img w-[96px] h-[108px] bg-gray-400 rounded-[16px]"></div>
                         <div>
-                            <h2 className='text-[16px] font-semibold font-poppins text-second '>Black Automatic Watch
+                            <h2 className='text-[16px] font-semibold font-praymary text-second '>Black Automatic Watch
                             </h2>
-                            <p className='text-[14px] font-normal font-poppins text-[#4B5563] mt-[4px]'>One size</p>
+                            <p className='text-[14px] font-normal font-praymary text-[#4B5563] mt-[4px]'>One size</p>
 
                             <div
                                 className="BTN w-[110px] bg-[#E5E7EB] px-[12px] py-[8px] rounded-[20px] flex justify-between mt-[20px]">
@@ -188,7 +188,7 @@ return (
                     </div>
 
                     <div className='PRICE text-center'>
-                        <p className='text-[16px] font-semibold font-poppins text-second mt-[31px]'>$169.99</p>
+                        <p className='text-[16px] font-semibold font-praymary text-second mt-[31px]'>$169.99</p>
                         <p className='text-[14px] font-normal font-poppins text-second line-through'>$169.99</p>
                     </div>
                 </div>
