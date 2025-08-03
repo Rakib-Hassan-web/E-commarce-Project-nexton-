@@ -282,7 +282,8 @@ return (
                         <div className='PRICE text-center'>
                             <p className='text-[16px] font-semibold font-praymary text-second mt-[31px]'>{item.price}$
                             </p>
-                            <p className='text-[14px] font-normal font-praymary text-second line-through'>$169.99</p>
+                            {/* ---------discount price--------- */}
+                            {/* <p className='text-[14px] font-normal font-praymary text-second line-through'>$169.99</p> */}
                         </div>
                     </div>
                     ))
