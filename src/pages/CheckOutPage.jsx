@@ -53,7 +53,7 @@ const handleAddqty =(id)=>{
      prev.map((item)=>{
         if(item.id != id) return item
 
-       
+        return {...item ,Qty:item.Qty+1}
 
      })
 
