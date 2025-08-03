@@ -39,9 +39,9 @@ const LoginPage = () => {
                     </div>
                     {/* -----Password  */}
                     <div>
-                        <p className='text-base font-semibold text-second'>Password</p>
+                        <p className='text-base font-semibold text-left font-praymary text-second'>Password</p>
                         <p className='text-red-600 font-poppins'>{passError}</p>
-                        <input className='w-full border border-BorderCol rounded-[12px] h-[43px] px-5 outline-none mt-2' type="password" />
+                        <input className='w-full border border-[#E5E7EB] font-praymary text-[14px] rounded-[12px] h-[43px] px-5 outline-none mt-2' type="password" />
                     </div>
                  
                 </div>
