@@ -97,29 +97,29 @@ const RegisterPage = () => {
             <div className='flex justify-center items-center'>
                <Form onSubmit={handleSubmit} className='w-[440px] text-center'>
                 {/* -------Header-------- */}
-                <div><h2 className='text-[36px] font-semibold text-second text-center mb-[60px]'>Register</h2></div>
+                <div><h2 className='text-[36px] font-semibold text-second font-praymary text-center mb-[60px]'>Register</h2></div>
    {/* -------Input Box-------- */}
                 <div className='flex flex-col gap-[24px]'>
 
 
 {/* -----------username------------ */}
  <div>
-                        <p className='text-base font-semibold text-second text-left'>User Name</p>
-                        <p className='text-red-600 font-poppins'>{usernameError}</p>
+                        <p className='text-base font-semibold text-second font-praymary text-left'>User Name</p>
+                        <p className='text-red-600 font-praymary'>{usernameError}</p>
                         <input onChange={(e)=>{setusername(e.target.value),setusernameError('')}} className='w-full border border-[#E5E7EB] rounded-[12px] h-[43px] px-5 outline-none mt-2' placeholder='Enter Your Full Name' type="text" />
                     </div>
 
 
                     {/* -----Email  */}
                     <div>
-                        <p className='text-base font-semibold text-second text-left'>Email</p>
-                        <p className='text-red-600 font-poppins'>{emailError}</p>
+                        <p className='text-base font-semibold text-second font-praymary text-left'>Email</p>
+                        <p className='text-red-600 font-praymary'>{emailError}</p>
                         <input onChange={(e)=>{setEmail(e.target.value),setEmailError('')}} className='w-full border border-[#E5E7EB] outline-none  rounded-[12px] h-[43px] px-5  mt-2' placeholder='example@example.com' type="email" />
                     </div>
                     {/* -----Password  */}
                     <div className=' relative'>
-                        <p className='text-base font-semibold text-second text-left'>Password</p>
-                        <p className='text-red-600 font-poppins'>{passError}</p>
+                        <p className='text-base font-semibold font-praymary text-second text-left'>Password</p>
+                        <p className='text-red-600 font-praymary'>{passError}</p>
                         <input onChange={(e)=>{setPass(e.target.value),setPassError('')}}  className='w-full border border-[#E5E7EB] rounded-[12px] h-[43px] px-5 outline-none mt-2' type={showpass? 'text' : 'password'} />
 
 
@@ -134,8 +134,8 @@ const RegisterPage = () => {
                     </div>
                     {/* -----Password again */}
                     <div>
-                        <p className='text-base font-semibold text-second text-left'>Password (Again)</p>
-                        <p className='text-red-600 font-poppins'>{againError}</p>
+                        <p className='text-base font-semibold font-praymary text-second text-left'>Password (Again)</p>
+                        <p className='text-red-600 font-praymary'>{againError}</p>
                         <input  onChange={(e)=>{setPassAgain(e.target.value),setAgainError('')}}  className='w-full border border-[#E5E7EB] rounded-[12px] h-[43px] px-5 outline-none mt-2'type="password" />
                     </div>
                 </div>
@@ -145,9 +145,9 @@ const RegisterPage = () => {
 
                    {
                      loading?   
-                    <button className='w-full bg-second rounded-full text-white py-[14px]  cursor-progress'>Continue</button>
+                    <button className='w-full bg-second rounded-full font-praymary  text-white py-[14px]  cursor-progress'>Continue</button>
                       :
-                    <button className='w-full bg-second rounded-full text-white py-[14px] cursor-pointer '>Continue</button>
+                    <button className='w-full bg-second rounded-full  font-praymary text-white py-[14px] cursor-pointer '>Continue</button>
 
                      }
 
