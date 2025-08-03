@@ -83,21 +83,21 @@ return (
 
                         <div className="CITY flex justify-between">
                             <div className='w-[283px] p-[24px]'>
-                                <p className='text-[16px] text-[#111827] font-medium font-poppins'>City</p>
+                                <p className='text-[16px] text-[#111827] font-medium font-praymary'>City</p>
                                 <input type='text'
-                                    className='outline-0 text-[18px] font-poppins text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
+                                    className='outline-0 text-[18px] font-praymary text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
                             </div>
 
                             <div className='w-[283px] p-[24px]'>
-                                <p className='text-[16px] text-[#111827] font-medium font-poppins'>Country</p>
+                                <p className='text-[16px] text-[#111827] font-medium font-praymary'>Country</p>
                                 <input type='text'
-                                    className='outline-0 text-[18px] font-poppins text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
+                                    className='outline-0 text-[18px] font-praymary text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
                             </div>
                         </div>
 
                         <div className="ADDRESS flex justify-between">
                             <div className='w-[283px] p-[24px]'>
-                                <p className='text-[16px] text-[#111827] font-medium font-poppins'>State/Province</p>
+                                <p className='text-[16px] text-[#111827] font-medium font-praymary'>State/Province</p>
                                 <input type='text'
                                     className='outline-0 text-[18px] font-poppins text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
                             </div>
