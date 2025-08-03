@@ -27,15 +27,15 @@ const LoginPage = () => {
             <div className='flex justify-center items-center'>
                <Form onSubmit={handleSubmit} className='w-[440px] text-center'>
                 {/* -------Header-------- */}
-                <div><h2 className='text-[36px] font-semibold text-second text-center mb-[60px]'>Login</h2></div>
+                <div><h2 className='text-[36px] font-semibold text-second font-praymary mb-[60px]'>Login</h2></div>
 
                 {/* -------Input Box-------- */}
                 <div className='flex flex-col gap-[24px]'>
                     {/* -----Email  */}
                     <div>
-                        <p className='text-base font-semibold text-second'>Email</p>
+                        <p className='text-base font-semibold text-left font-praymary text-second'>Email</p>
                         <p className='text-red-600 font-poppins'>{emailError}</p>
-                        <input  className='w-full border border-BorderCol rounded-[12px] h-[43px] px-5 outline-none mt-2' placeholder='example@example.com' type="email" />
+                        <input  className='w-full border border-[#E5E7EB] font-praymary text-[14px] rounded-[12px] h-[43px] px-5 outline-none mt-2' placeholder='example@example.com' type="email" />
                     </div>
                     {/* -----Password  */}
                     <div>
