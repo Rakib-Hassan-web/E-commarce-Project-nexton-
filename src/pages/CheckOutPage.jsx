@@ -166,32 +166,7 @@ return (
                     <span className='w-full bg-[#E5E7EB] h-[1px] inline-block'></span>
                 </div>
 
-                <div className='ITEM flex justify-between mt-[24px]'>
-                    <div className='flex gap-[24px]'>
-                        <div className="Img w-[96px] h-[108px] bg-gray-400 rounded-[16px]"></div>
-                        <div>
-                            <h2 className='text-[16px] font-semibold font-praymary text-second '>Black Automatic Watch
-                            </h2>
-                            <p className='text-[14px] font-normal font-praymary text-[#4B5563] mt-[4px]'>One size</p>
-
-                            <div
-                                className="BTN w-[110px] bg-[#E5E7EB] px-[12px] py-[8px] rounded-[20px] flex justify-between mt-[20px]">
-                                <button
-                                    className='w-[24px] h-[24px] bg-white rounded-full flex justify-center items-center'>
-                                    <GrFormSubtract /></button>
-                                <p>1</p>
-                                <button
-                                    className='w-[24px] h-[24px] bg-white rounded-full flex justify-center items-center'>
-                                    <MdAdd /></button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='PRICE text-center'>
-                        <p className='text-[16px] font-semibold font-praymary text-second mt-[31px]'>$169.99</p>
-                        <p className='text-[14px] font-normal font-praymary text-second line-through'>$169.99</p>
-                    </div>
-                </div>
+             
 
 
                 <div className='ITEM flex justify-between mt-[24px]'>
