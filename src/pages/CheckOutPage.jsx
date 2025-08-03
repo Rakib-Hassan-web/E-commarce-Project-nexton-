@@ -28,7 +28,7 @@ return localCart?.includes(item.id)
 
 
 const AddQuantity = filterproduct.map((item)=>{
-return {...item , Qty:1 ,UnitePrice:item.price}
+return {...item , Qty:1 , UnitePrice:item.price}
 })
 
 
@@ -53,7 +53,12 @@ const handleAddqty =(id)=>{
      prev.map((item)=>{
         if(item.id != id) return item
 
-        return {...item ,Qty:item.Qty+1 , }
+        const updateQty=item.Qty+1;
+        const updatePriceee = item.UnitePrice * updateQty
+
+
+
+ 
 
      })
 
@@ -61,6 +66,10 @@ const handleAddqty =(id)=>{
     ))
 
 }
+
+const total =product.reduce((sem,product)=>{
+    return sem +product.price
+},0)
 
 
 
@@ -281,18 +290,18 @@ return (
                     <span className='w-full bg-[#E5E7EB] h-[1px] inline-block mt-[24px]'></span>
 
                     <div className='flex justify-between items-center mt-[24px]'>
-                        <p className='text-[16px] font-normal font-praymary text-[#4B5563] '>Subtotal</p>
-                        <p className='text-[16px] font-normal font-praymary text-[#4B5563] '>$169.99</p>
+                        <p className='text-[16px] font-normal font-praymary text-second '>Subtotal</p>
+                        <p className='text-[16px] font-normal font-praymary text-second '>{total} $</p>
                     </div>
 
                     <div className='flex justify-between items-center mt-[8px]'>
                         <p className='text-[16px] font-normal font-praymary text-[#4B5563] '>Shipping estimate</p>
-                        <p className='text-[16px] font-normal font-praymary text-[#4B5563] '>$5.00</p>
+                        <p className='text-[16px] font-normal font-praymary text-[#4B5563] '>5.00$</p>
                     </div>
 
                     <div className='flex justify-between items-center mt-[8px]'>
                         <p className='text-[16px] font-normal font-praymary text-[#4B5563] '>Tax estimate</p>
-                        <p className='text-[16px] font-normal font-praymary text-[#4B5563] '>$24.90</p>
+                        <p className='text-[16px] font-normal font-praymary text-[#4B5563] '>24.90$</p>
                     </div>
 
                     <div className='flex justify-between items-center mt-[24px]'>
