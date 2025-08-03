@@ -1,13 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 // import BreadCrumb from './BreadCrumb'
 import { FaRegCircleUser } from "react-icons/fa6";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { CiCreditCard2 } from "react-icons/ci";
 import { GrFormSubtract } from 'react-icons/gr';
 import { MdAdd } from 'react-icons/md';
+import axios from 'axios';
 // import OrderSummary from './common/OrderSummary';
 
 const CheckOutPage = () => {
+
+
+// ----------api------
+const [product , setprodect] =useState([])
+
+useEffect(()=>{
+
+axios.get('https://api.escuelajs.co/api/v1/products')
+.then((res)=>{setprodect(res.data)})
+
+.catch((error)=>{
+})
+} ,[])
+
+console.log(product)
+
+
+
+
+
 return (
 <>
     <section id='checkOut' className='pt-[40px] pb-[72px]'>
