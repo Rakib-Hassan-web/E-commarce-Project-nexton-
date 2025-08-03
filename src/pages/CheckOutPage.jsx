@@ -99,13 +99,13 @@ return (
                             <div className='w-[283px] p-[24px]'>
                                 <p className='text-[16px] text-[#111827] font-medium font-praymary'>State/Province</p>
                                 <input type='text'
-                                    className='outline-0 text-[18px] font-poppins text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
+                                    className='outline-0 text-[18px] font-praymary text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
                             </div>
 
                             <div className='w-[283px] p-[24px]'>
-                                <p className='text-[16px] text-[#111827] font-medium font-poppins'>Postal code</p>
+                                <p className='text-[16px] text-[#111827] font-medium font-praymary'>Postal code</p>
                                 <input type='text'
-                                    className='outline-0 text-[18px] font-poppins text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
+                                    className='outline-0 text-[18px] font-praymary text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
                             </div>
                         </div>
                     </div>
@@ -113,31 +113,31 @@ return (
                     <div className="PAYMENT mt-[41px] border border-[#E5E7EB] rounded-[16px]">
                         <div className="head flex gap-[12px] items-center p-[12px] border-b border-[#E5E7EB]">
                             <CiCreditCard2 className='text-[24px] text-[#334155]' />
-                            <p className='text-[16px] text-[#4B5563] font-medium font-poppins'>PAYMENT</p>
+                            <p className='text-[16px] text-[#4B5563] font-medium font-praymary'>PAYMENT</p>
                         </div>
 
                         <div className='p-[24px]'>
-                            <p className='text-[16px] text-[#111827] font-medium font-poppins'>Card number</p>
+                            <p className='text-[16px] text-[#111827] font-medium font-praymary'>Card number</p>
                             <input type='number'
-                                className='outline-0 text-[18px] font-poppins text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
+                                className='outline-0 text-[18px] font-praymary text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
                         </div>
 
                         <div className='p-[24px]'>
-                            <p className='text-[16px] text-[#111827] font-medium font-poppins'>Name on the card</p>
+                            <p className='text-[16px] text-[#111827] font-medium font-praymary'>Name on the card</p>
                             <input type='text'
-                                className='outline-0 text-[18px] font-poppins text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
+                                className='outline-0 text-[18px] font-praymary text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
                         </div>
 
                         <div className='flex gap-[24px] p-[24px]'>
                             <div className='w-[386px]'>
-                                <p className='text-[16px] text-[#111827] font-medium font-poppins'>Expiration date
+                                <p className='text-[16px] text-[#111827] font-medium font-praymary'>Expiration date
                                     (MM/YY)</p>
                                 <input type='text'
-                                    className='outline-0 text-[18px] font-poppins text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
+                                    className='outline-0 text-[18px] font-praymary text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
                             </div>
 
                             <div className='w-[180px]'>
-                                <p className='text-[16px] text-[#111827] font-medium font-poppins'>CVC</p>
+                                <p className='text-[16px] text-[#111827] font-medium font-praymary'>CVC</p>
                                 <input type='text'
                                     className='outline-0 text-[18px] font-poppins text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
                             </div>
