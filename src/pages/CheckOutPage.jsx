@@ -249,7 +249,7 @@ return (
                                     <button
                                         className='w-[24px] h-[24px] bg-white rounded-full flex justify-center items-center'>
                                         <GrFormSubtract /></button>
-                                    <p></p>
+                                    <p>{item.Qty}</p>
                                     <button onClick={()=>handleAddqty(id)}
                                         className='w-[24px] h-[24px] bg-white rounded-full flex justify-center items-center'>
                                         <MdAdd /></button>
