@@ -47,9 +47,18 @@ setprodect(AddQuantity)
 // ----------handeller----------
 const handleAddqty =(id)=>{
     console.log(id)
-    // setprodect((prev)=>(
-    //     console.log(prev)
-    // ))
+    setprodect((prev)=>(
+        
+
+     prev.map((item)=>{
+        if(item.id != id) return item
+
+       
+
+     })
+
+
+    ))
 
 }
 
