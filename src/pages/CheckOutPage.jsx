@@ -307,7 +307,7 @@ return (
 
                     <div className='flex justify-between items-center mt-[24px]'>
                         <p className='text-[16px] font-semibold font-praymary text-second '>Order total</p>
-                        <p className='text-[16px] font-semibold font-praymary text-second '>$199.89</p>
+                        <p className='text-[16px] font-semibold font-praymary text-second '>{5+24.90+total}</p>
                     </div>
 
                     <div className='mt-[24px]'>
