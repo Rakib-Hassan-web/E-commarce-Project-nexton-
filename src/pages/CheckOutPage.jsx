@@ -10,6 +10,7 @@ import axios from 'axios';
 
 const CheckOutPage = () => {
 
+const localCart = JSON.parse(localStorage.getItem('ProductKey'))
 
 // ----------api------
 const [product , setprodect] =useState([])
@@ -17,13 +18,20 @@ const [product , setprodect] =useState([])
 useEffect(()=>{
 
 axios.get('https://api.escuelajs.co/api/v1/products')
-.then((res)=>{setprodect(res.data)})
+.then((res)=>{setprodect(res.data)
+ 
+})
 
 .catch((error)=>{
 })
 } ,[])
 
-console.log(product)
+// console.log(product)
+let filterproduct =  product?.filter((item)=>{
+return localCart?.includes(item.id)
+
+})
+console.log(filterproduct)
 
 
 
@@ -189,10 +197,17 @@ return (
 
              
 
+{/* ------single product cart--------- */}
+{
+
+    filterproduct.map((item ,i)=>(
+      
 
                 <div className='ITEM flex justify-between mt-[24px]'>
                     <div className='flex gap-[24px]'>
-                        <div className="Img w-[96px] h-[108px] bg-gray-400 rounded-[16px]"></div>
+                        <div className="Img w-[96px] h-[108px] bg-gray-400 rounded-[16px]">
+                            <img src="" alt="" />
+                        </div>
                         <div>
                             <h2 className='text-[16px] font-semibold font-praymary text-second '>Black Automatic Watch
                             </h2>
@@ -216,6 +231,8 @@ return (
                         <p className='text-[14px] font-normal font-praymary text-second line-through'>$169.99</p>
                     </div>
                 </div>
+    ))
+}
                 <span className='w-full bg-[#E5E7EB] h-[1px] inline-block mt-[24px]'></span>
 
                 <div className='flex justify-between items-center mt-[24px]'>
