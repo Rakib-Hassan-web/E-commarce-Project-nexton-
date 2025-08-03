@@ -24,7 +24,7 @@ const CheckOutPage = () => {
                            </div>
                             <div className="phnEmail flex gap-[24px] items-center">
                                 <div className='w-[283px] p-[24px]'>
-                                    <p className='text-[16px] text-second font-medium font-poppins'>Your phone number</p>
+                                    <p className='text-[16px] text-second font-medium font-praymary'>Your phone number</p>
                                     <input type='number' className='outline-0 text-[18px] font-poppins text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
                                 </div>
 
