@@ -57,16 +57,16 @@ return (
                             </div>
 
                             <div className='w-[283px] p-[24px]'>
-                                <p className='text-[16px] text-[#111827] font-medium font-poppins'>Last Name</p>
+                                <p className='text-[16px] text-[#111827] font-medium font-praymary'>Last Name</p>
                                 <input type='text'
-                                    className='outline-0 text-[18px] font-poppins text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
+                                    className='outline-0 text-[18px] font-praymary text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
                             </div>
                         </div>
                         <div className='flex gap-[24px] p-[24px]'>
                             <div className='w-[384px]'>
-                                <p className='text-[16px] text-second font-medium font-poppins'>Address line 1</p>
+                                <p className='text-[16px] text-second font-medium font-praymary'>Address line 1</p>
                                 <input type='text'
-                                    className='outline-0 text-[18px] font-poppins text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
+                                    className='outline-0 text-[18px] font-praymary text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
                             </div>
                             <div className='w-[180px]'>
                                 <p className='text-[16px] text-second font-medium font-poppins'>Apt, Suite</p>
