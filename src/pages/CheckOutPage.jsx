@@ -14,7 +14,7 @@ const localCart = JSON.parse(localStorage.getItem('ProductKey'))
 
 // ----------api------
 const [product , setprodect] =useState([])
-const [cartProduct , setcartProduct ] =useState([])
+// const [cartProduct , setcartProduct ] =useState([])
 
 useEffect(()=>{
 
@@ -34,7 +34,7 @@ return {...item , Qty:1}
 
 
 
-setcartProduct(AddQuantity)
+setprodect(AddQuantity)
 
 
 })
@@ -223,7 +223,7 @@ return (
                     {/* ------single product cart--------- */}
                     {
 
-                    cartProduct.map((item )=>(
+                    product.map((item )=>(
 
 
 
