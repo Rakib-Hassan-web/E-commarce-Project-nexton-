@@ -44,7 +44,10 @@ setprodect(AddQuantity)
 } ,[])
 
 
+// ----------handeller----------
+const handleAddqty =(id)=>{
 
+}
 
 
 
@@ -246,8 +249,8 @@ return (
                                     <button
                                         className='w-[24px] h-[24px] bg-white rounded-full flex justify-center items-center'>
                                         <GrFormSubtract /></button>
-                                    <p>1</p>
-                                    <button
+                                    <p></p>
+                                    <button onClick={()=>handleAddqty(id)}
                                         className='w-[24px] h-[24px] bg-white rounded-full flex justify-center items-center'>
                                         <MdAdd /></button>
                                 </div>
