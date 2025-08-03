@@ -229,22 +229,22 @@ return (
 
                 <div className='flex justify-between items-center mt-[8px]'>
                     <p className='text-[16px] font-normal font-praymary text-[#4B5563] '>Shipping estimate</p>
-                    <p className='text-[16px] font-normal font-poppins text-[#4B5563] '>$5.00</p>
+                    <p className='text-[16px] font-normal font-praymary text-[#4B5563] '>$5.00</p>
                 </div>
 
                 <div className='flex justify-between items-center mt-[8px]'>
-                    <p className='text-[16px] font-normal font-poppins text-[#4B5563] '>Tax estimate</p>
-                    <p className='text-[16px] font-normal font-poppins text-[#4B5563] '>$24.90</p>
+                    <p className='text-[16px] font-normal font-praymary text-[#4B5563] '>Tax estimate</p>
+                    <p className='text-[16px] font-normal font-praymary text-[#4B5563] '>$24.90</p>
                 </div>
 
                 <div className='flex justify-between items-center mt-[24px]'>
-                    <p className='text-[16px] font-semibold font-poppins text-second '>Order total</p>
-                    <p className='text-[16px] font-semibold font-poppins text-second '>$199.89</p>
+                    <p className='text-[16px] font-semibold font-praymary text-second '>Order total</p>
+                    <p className='text-[16px] font-semibold font-praymary text-second '>$199.89</p>
                 </div>
 
                 <div className='mt-[24px]'>
                     <button
-                        className='w-full h-[52px] cursor-pointer bg-second rounded-full text-[16px] text-white font-medium font-poppins'>Confirm
+                        className='w-full h-[52px] cursor-pointer bg-second rounded-full text-[16px] text-white font-medium font-praymary'>Confirm
                         order</button>
                 </div>
 
