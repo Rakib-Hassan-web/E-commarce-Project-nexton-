@@ -28,7 +28,7 @@ return localCart?.includes(item.id)
 
 
 const AddQuantity = filterproduct.map((item)=>{
-return {...item , Qty:1}
+return {...item , Qty:1 ,UnitePrice:item.price}
 })
 
 
@@ -46,15 +46,15 @@ setprodect(AddQuantity)
 
 // ----------handeller----------
 const handleAddqty =(id)=>{
-    console.log(id)
+ 
     setprodect((prev)=>(
         
 
      prev.map((item)=>{
         if(item.id != id) return item
 
-        return {...item ,Qty:item.Qty+1}
-hea plus hochhe
+        return {...item ,Qty:item.Qty+1 , }
+
      })
 
 
@@ -64,7 +64,7 @@ hea plus hochhe
 
 
 
-
+console.log(product)
 
 return (
 <>
@@ -260,11 +260,11 @@ return (
                                 <div
                                     className="BTN w-[110px] bg-[#E5E7EB] px-[12px] py-[8px] rounded-[20px] flex justify-between mt-[20px]">
                                     <button
-                                        className='w-[24px] h-[24px] bg-white rounded-full flex justify-center items-center'>
+                                        className='w-[24px] h-[24px] bg-white cursor-pointer rounded-full flex justify-center items-center'>
                                         <GrFormSubtract /></button>
                                     <p>{item.Qty}</p>
                                     <button onClick={()=>handleAddqty(item.id)}
-                                        className='w-[24px] h-[24px] bg-white rounded-full flex justify-center items-center'>
+                                        className='w-[24px] h-[24px] bg-white rounded-full cursor-pointer flex justify-center items-center'>
                                         <MdAdd /></button>
                                 </div>
                             </div>
