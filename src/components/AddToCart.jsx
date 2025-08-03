@@ -71,7 +71,7 @@ return (
             </div>
 
             {/* -----------total_price------- */}
-            <div className="totalPrice flex items-center gap-59 mb-4">
+            <div className="totalPrice flex items-center gap-59  mt-25 mb-4">
                 <h2 className='product_price text-[23px] text-second font-medium font-praymary pl-10'>Total Price :
                 </h2>
                 <h2 className='product_price text-[20px] text-second font-medium font-praymary'>{totalPrice}$</h2>
