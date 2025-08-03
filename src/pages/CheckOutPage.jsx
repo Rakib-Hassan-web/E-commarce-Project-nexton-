@@ -58,7 +58,7 @@ const handleAddqty =(id)=>{
 
 
 
- 
+        return {...item ,Qty:updateQty ,price:updatePriceee }
 
      })
 
