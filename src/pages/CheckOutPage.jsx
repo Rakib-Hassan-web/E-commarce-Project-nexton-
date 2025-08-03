@@ -54,7 +54,7 @@ const handleAddqty =(id)=>{
         if(item.id != id) return item
 
         return {...item ,Qty:item.Qty+1}
-
+hea plus hochhe
      })
 
 
