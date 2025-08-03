@@ -10,6 +10,7 @@ import ProductPage from './pages/ProductPage'
 import RegisterPage from './pages/RegisterPage'
 import LoginPage from './pages/LoginPage'
   import { ToastContainer } from 'react-toastify';
+import CheckOutPage from './pages/CheckOutPage'
 
 
 function App() {
@@ -27,6 +28,7 @@ const myroute = createBrowserRouter(createRoutesFromElements(
   <Route path='/Product/:ProductID' element={<ProductPage/>}/>
   <Route path='RegisterPage' element={<RegisterPage/>} />
   <Route path='/LoginPage'   element={<LoginPage/>}/>
+  <Route path='/CheckOut'   element={<CheckOutPage/>}/>
 </Route>
 
 

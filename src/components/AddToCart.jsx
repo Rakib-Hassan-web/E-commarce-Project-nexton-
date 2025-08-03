@@ -78,7 +78,7 @@ return (
 
             </div>
             {/* ------------check out button---------- */}
-            <Link
+            <Link to={'/CheckOut'}
                 className='w-full text-center bg-black mt-[5px] inline-block py-4 text-2xl text-white font-praymary font-semibold'>
             Check Out</Link>
 
