@@ -217,18 +217,18 @@ return (
 
                     <div className='PRICE text-center'>
                         <p className='text-[16px] font-semibold font-praymary text-second mt-[31px]'>$169.99</p>
-                        <p className='text-[14px] font-normal font-poppins text-second line-through'>$169.99</p>
+                        <p className='text-[14px] font-normal font-praymary text-second line-through'>$169.99</p>
                     </div>
                 </div>
                 <span className='w-full bg-[#E5E7EB] h-[1px] inline-block mt-[24px]'></span>
 
                 <div className='flex justify-between items-center mt-[24px]'>
-                    <p className='text-[16px] font-normal font-poppins text-[#4B5563] '>Subtotal</p>
-                    <p className='text-[16px] font-normal font-poppins text-[#4B5563] '>$169.99</p>
+                    <p className='text-[16px] font-normal font-praymary text-[#4B5563] '>Subtotal</p>
+                    <p className='text-[16px] font-normal font-praymary text-[#4B5563] '>$169.99</p>
                 </div>
 
                 <div className='flex justify-between items-center mt-[8px]'>
-                    <p className='text-[16px] font-normal font-poppins text-[#4B5563] '>Shipping estimate</p>
+                    <p className='text-[16px] font-normal font-praymary text-[#4B5563] '>Shipping estimate</p>
                     <p className='text-[16px] font-normal font-poppins text-[#4B5563] '>$5.00</p>
                 </div>
 
