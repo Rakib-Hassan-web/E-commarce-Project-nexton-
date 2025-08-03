@@ -69,16 +69,16 @@ return (
                                     className='outline-0 text-[18px] font-praymary text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
                             </div>
                             <div className='w-[180px]'>
-                                <p className='text-[16px] text-second font-medium font-poppins'>Apt, Suite</p>
+                                <p className='text-[16px] text-second font-medium font-praymary'>Apt, Suite</p>
                                 <input type='text'
-                                    className='outline-0 text-[18px] font-poppins text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
+                                    className='outline-0 text-[18px] font-praymary text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
                             </div>
                         </div>
 
                         <div className="LINE2 p-[24px]">
-                            <p className='text-[16px] text-second font-medium font-poppins'>Address line 2</p>
+                            <p className='text-[16px] text-second font-medium font-praymary'>Address line 2</p>
                             <input type='text'
-                                className='outline-0 text-[18px] font-poppins text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
+                                className='outline-0 text-[18px] font-praymary text-gray-500 pl-[10PX] border border-[#E5E7EB] h-[43px] w-full rounded-[12px] mt-[8px]'></input>
                         </div>
 
                         <div className="CITY flex justify-between">
