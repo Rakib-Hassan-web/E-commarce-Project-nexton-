@@ -317,6 +317,13 @@ return (
                     </div>
 
                 </div>
+                useImperativeHandle(
+                  first,
+                  () => {
+                    second
+                  },
+                  [third],
+                )
 
             </div>
         </div>
