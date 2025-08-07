@@ -25,8 +25,9 @@ return (
 
 
   {/* ------------dark mood ar jonno dark:bg-black---------- */}
-  <nav className='container py-[27px]  hidden lg:block   ' id='navbar'>
+  <nav className=' py-[27px]  hidden lg:block   ' id='navbar'>
 
+<div className='container'>
 
     <div className="nav_row flex justify-between items-center">
 
@@ -47,40 +48,36 @@ return (
       <div className="nav_icons relative flex gap-1 items-center " id='nav_icons'>
 
         <Link to={'/RegisterPage'} className='user_icon text-2xl text-praymary  mr-[22px]' id='user_icon'>
-          <RiUserLine /></Link>
+        <RiUserLine />
+        </Link>
 
         <button onClick={()=>setCart(!cart)} className='relative cursor-pointer'>
           <RiShoppingCart2Line className='text-[24px] text-Primary' />
           <div
             className='absolute right-[-7px] top-[-7px] bg-[#0EA5E9] h-[20px] w-[20px] flex items-center justify-center rounded-full text-[#fff] text-[12px]'>
-           {localProduct? localProduct.length : 0 }</div>
+            {localProduct? localProduct.length : 0 }</div>
         </button>
       </div>
 
 
 
       {/* ---------cart----------- */}
-    
 
-  <div id='CART' className={`fixed top-0 h-screen w-full left-0 flex justify-end bg-[#0000009b] z-10 duration-[.3s]
+
+      <div id='CART' className={`fixed top-0 h-screen w-full left-0 flex justify-end bg-[#0000009b] z-10 duration-[.3s]
         ${cart? 'hidden' : 'visible' }` }>
-        <AddToCart closeDiv={()=>setCart(!cart)} closeCart={<RxCross1 onClick={()=>setCart(!cart)} className='text-3xl'/>}/>
-    </div>
-
-
-
-
-
-
-
-
-
+        <AddToCart closeDiv={()=>setCart(!cart)} closeCart={<RxCross1 onClick={()=>setCart(!cart)}
+            className='text-3xl'/>}/>
+      </div>
 
 
     </div>
+</div>
 
-
-
+{/* ------------search result---------- */}
+<div className='bg-red-300 py-5 px-34 '>
+  <h1 className='hover:bg-gray-400 duration-500  py-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate blanditiis enim ex veritatis ullam suscipit! Nesciunt porro earum assumenda, neque ullam quos? Iure quas eos tempora natus modi ducimus dolorum!</h1>
+</div>
   </nav>
 
 
