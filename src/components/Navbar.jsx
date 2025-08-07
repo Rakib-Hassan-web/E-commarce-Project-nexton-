@@ -75,8 +75,8 @@ return (
 </div>
 
 {/* ------------search result---------- */}
-<div className='bg-red-300 py-5 px-34 '>
-  <h1 className='hover:bg-gray-400 duration-500  py-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate blanditiis enim ex veritatis ullam suscipit! Nesciunt porro earum assumenda, neque ullam quos? Iure quas eos tempora natus modi ducimus dolorum!</h1>
+<div className='bg-gray-200 py-5 px-14  w-[1000px] m-auto mt-5 rounded-3xl'>
+  <h1 className='hover:bg-gray-400 duration-500  py-4'></h1>
 </div>
   </nav>
 
