@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Form, Link } from 'react-router'
 
 import { RiSearch2Line, RiShoppingCart2Line } from "react-icons/ri"
@@ -9,6 +9,7 @@ import { RiUserLine } from "react-icons/ri";
 import { RiShoppingCartLine } from "react-icons/ri";
 import AddToCart from './AddToCart';
 import { RxCross1 } from 'react-icons/rx';
+import axios from 'axios';
 
 
 
@@ -22,7 +23,18 @@ const [cart ,setCart]= useState(true)
 const [search_Inp ,setsearch_Inp] =useState('')
 
 
-// --------------
+// --------------api Fetch---------
+const [product , setprodect] =useState([])
+
+useEffect(()=>{
+
+axios.get('https://api.escuelajs.co/api/v1/products')
+.then((res)=>{setprodect(res.data)})
+
+.catch((error)=>{
+})
+} ,[])
+
 
 
 
