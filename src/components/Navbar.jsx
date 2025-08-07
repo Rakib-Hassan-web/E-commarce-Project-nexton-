@@ -19,15 +19,21 @@ const localProduct =JSON.parse(localStorage.getItem('ProductKey'))
 
 const [cart ,setCart]= useState(true)
 
-const [searchinp ,setsearchinp] =useState('')
+const [search_Inp ,setsearch_Inp] =useState('')
+
+
+// --------------
+
+
 
 // -------handler--------
 
 const searchHandler =()=>{
+  if(!search_Inp) return alert("Input Dosen't Be Empty ")
 
 }
 
-console.log(searchinp)
+
 
 return (
 <>
@@ -43,13 +49,13 @@ return (
       <Link to={'/'} className="nav_LOGO w-[119px] " id='nav_LOGO'><img src={logo} alt="" /></Link>
 
 
-      <Form
+      <Form onSubmit={searchHandler}
 
         className="navsearch w-[400px] h-[52px]  bg-[#F8F8F8] rounded-[100px] flex items-center gap-[10px] pl-[24px] "
         id='navsearch'>
 
         < RiSearch2Line className='text-2xl text-praymary  srach_icon' id='srach_icon' onClick={()=>setvalue(!value)} />
-          <input onChange={(e)=>setsearchinp(e.target.value)} className='navinp w-full border-none outline-none text-[14px] font-normal text-praymary font-praymary '
+          <input onChange={(e)=>setsearch_Inp(e.target.value)} className='navinp w-full border-none outline-none text-[14px] font-normal text-praymary font-praymary '
             placeholder='Search in products... ' id='navinp' type="text" />
 
       </Form>
