@@ -76,7 +76,9 @@ return (
 
 {/* ------------search result---------- */}
 <div className='bg-gray-200 py-5 px-14  w-[1000px] m-auto mt-5 rounded-3xl'>
-  <h1 className='hover:bg-gray-400 duration-500  py-4'></h1>
+
+  <h1 className=' pt-4 pb-2  border-b border-gray-400 text-lg font-praymary text-black '>alu</h1>
+
 </div>
   </nav>
 
