@@ -21,6 +21,7 @@ const localProduct =JSON.parse(localStorage.getItem('ProductKey'))
 const [cart ,setCart]= useState(true)
 
 const [search_Inp ,setsearch_Inp] =useState('')
+const [search_Rslt ,setsearch_Rslt] =useState([])
 
 
 // --------------api Fetch---------
@@ -35,13 +36,25 @@ axios.get('https://api.escuelajs.co/api/v1/products')
 })
 } ,[])
 
-
-
-
 // -------handler--------
 
-const searchHandler =()=>{
+const searchHandler =(e)=>{
+e.preventDefault()
+
   if(!search_Inp) return alert("Input Dosen't Be Empty ")
+
+
+
+
+
+ const DataFilter =product.filter((item)=> item.title === search_Inp)
+
+
+   
+  setsearch_Rslt(DataFilter)
+  console.log(DataFilter)
+  console.log(product)
+
 
 }
 
@@ -104,14 +117,21 @@ return (
 
 {/* ------------search result---------- */}
 <div className='bg-gray-200 pb-5 pt-2  w-[1000px] m-auto mt-5 rounded-3xl '>
-  <div className='flex items-center  justify-around  mt-10'>
+  {
+    search_Rslt.map((item)=>(
+
+  <div key={item.id} className='flex items-center  justify-around  mt-10'>
 
  <div className='flex items-center gap-5'>
-   <div className='w-[50px] h-[50px]  rounded-2xl bg-amber-100 mb-3'></div>
-  <h1 className=' pt-4 pb-2  text-lg font-praymary text-black mt-[-15px] '>product name</h1>
+   <div className='w-[80px] h-[80px]   mb-3'>
+    <img src={item.category.image} alt="product image" className='rounded-[20px]' />
+   </div>
+  <h1 className=' pt-4 pb-2  text-lg font-praymary text-black mt-[-15px] '>{item.title}</h1>
   </div>
   <h1 className=' pt-4 pb-2   text-lg font-praymary text-black  mt-[-15px] '>price</h1>
    </div>
+    ))
+  }
 
 </div>
   </nav>
