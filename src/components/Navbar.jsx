@@ -103,9 +103,15 @@ return (
 </div>
 
 {/* ------------search result---------- */}
-<div className='bg-gray-200 py-5 px-14  w-[1000px] m-auto mt-5 rounded-3xl'>
+<div className='bg-gray-200 pb-5 pt-2  w-[1000px] m-auto mt-5 rounded-3xl '>
+  <div className='flex items-center  justify-around  mt-10'>
 
-  <h1 className=' pt-4 pb-2  border-b border-gray-400 text-lg font-praymary text-black '>alu</h1>
+ <div className='flex items-center gap-5'>
+   <div className='w-[50px] h-[50px]  rounded-2xl bg-amber-100 mb-3'></div>
+  <h1 className=' pt-4 pb-2  text-lg font-praymary text-black mt-[-15px] '>product name</h1>
+  </div>
+  <h1 className=' pt-4 pb-2   text-lg font-praymary text-black  mt-[-15px] '>price</h1>
+   </div>
 
 </div>
   </nav>
