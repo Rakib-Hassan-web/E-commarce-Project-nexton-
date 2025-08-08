@@ -21,6 +21,7 @@ const localProduct =JSON.parse(localStorage.getItem('ProductKey'))
 const [cart ,setCart]= useState(true)
 
 const [search_Inp ,setsearch_Inp] =useState('')
+
 const [search_Rslt ,setsearch_Rslt] =useState([])
 
 
@@ -47,7 +48,7 @@ if(!search_Inp) return alert("Input Dosen't Be Empty ")
 
 
 
-const DataFilter =product.filter((item)=> item.category.name === search_Inp )
+const DataFilter =product.filter((item)=> item.category.name.toLowerCase() === search_Inp.toLowerCase() )
 
 
 
@@ -119,7 +120,12 @@ return (
     {/* ------------search result---------- */}
     <div className=' pb-5 pt-2  w-[1000px] m-auto mt-5 rounded-3xl '>
       {
-      search_Rslt.map((item)=>(
+        
+        search_Rslt.length == 0?
+        <h2 className='text-3xl text-praymary font-semibold font-praymary text-center'>No Product Found!</h2>
+        :
+
+      search_Rslt?.map((item)=>(
 
       <div key={item.id} className='flex items-center  pl-25 justify-between px-20 mt-10'>
 
@@ -129,7 +135,7 @@ return (
           </div>
           <h1 className=' pt-4 pb-2  text-lg font-praymary text-black mt-[-15px]  '>{item.title}</h1>
         </div>
-        <h1 className=' pt-4 pb-2   text-lg font-praymary text-black  mt-[-15px] '>{item.price}$</h1>
+        <h1 className=' pt-4 pb-2  font-semibold  text-lg font-praymary text-black  mt-[-15px] '>{item.price}$</h1>
       </div>
       ))
       }
