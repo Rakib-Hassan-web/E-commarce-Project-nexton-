@@ -22,7 +22,7 @@ const [cart ,setCart]= useState(true)
 
 const [search_Inp ,setsearch_Inp] =useState('')
 
-const [search_Rslt ,setsearch_Rslt] =useState([])
+const [search_Rslt ,setsearch_Rslt] =useState(null)
 
 
 // --------------api Fetch---------
@@ -121,7 +121,7 @@ return (
     <div className=' pb-5 pt-2  w-[1000px] m-auto mt-5 rounded-3xl '>
       {
         
-        search_Rslt.length == 0?
+        search_Rslt?.length == 0?
         <h2 className='text-3xl text-praymary font-semibold font-praymary text-center'>No Product Found!</h2>
         :
 
