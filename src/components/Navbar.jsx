@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Form, Link } from 'react-router'
+import { Form, Link, useNavigate } from 'react-router'
 
 import { RiSearch2Line, RiShoppingCart2Line } from "react-icons/ri"
 import logo from '../assets/image/logo.png'
@@ -23,6 +23,7 @@ const [cart ,setCart]= useState(true)
 const [search_Inp ,setsearch_Inp] =useState('')
 
 const [search_Rslt ,setsearch_Rslt] =useState(null)
+const navigate =useNavigate()
 
 
 // --------------api Fetch---------
@@ -57,6 +58,13 @@ console.log(DataFilter)
 console.log(product)
 
 
+}
+
+
+// -----------=product handeler------
+
+const handleProduct =()=>{
+navigate('/DetailPage')
 }
 
 
@@ -127,7 +135,7 @@ return (
 
       search_Rslt?.map((item)=>(
 
-      <div key={item.id} className='flex items-center  pl-25 justify-between px-20 mt-10'>
+      <div  oncl key={item.id} className='flex items-center  pl-25 justify-between px-20 mt-10'>
 
         <div className='flex items-center gap-5'>
           <div className='w-[80px] h-[80px]   mb-3'>
