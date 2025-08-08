@@ -132,10 +132,10 @@ return (
         search_Rslt?.length == 0?
         <h2 className='text-3xl text-praymary font-semibold font-praymary text-center'>No Product Found!</h2>
         :
-
+      
       search_Rslt?.map((item)=>(
 
-      <div  oncl key={item.id} className='flex items-center  pl-25 justify-between px-20 mt-10'>
+      <div  onClick={handleProduct} key={item.id} className='flex items-center  pl-25 justify-between px-20 mt-10'>
 
         <div className='flex items-center gap-5'>
           <div className='w-[80px] h-[80px]   mb-3'>
