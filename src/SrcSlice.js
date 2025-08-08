@@ -7,13 +7,13 @@ export const SrcSlice = createSlice({
   },
   reducers: {
    
-    incrementByAmount: (state, action) => {
-      state.value += action.payload
+    PorductNamereducer: (state, action) => {
+      state.value = action.payload
     },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { incrementByAmount } = SrcSlice.actions
+export const { PorductNamereducer } = SrcSlice.actions
 
 export default SrcSlice.reducer

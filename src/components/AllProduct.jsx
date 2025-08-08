@@ -3,8 +3,12 @@ import Singleres from './comon/Singleres'
 import axios from 'axios'
 import Pagination from './Pagination';
 import { useNavigate } from 'react-router';
+import { useSelector } from 'react-redux';
 
 const AllProduct = ({Showdetails}) => {
+    const reduxProduct =useSelector((state)=> state.product.value)
+console.log(reduxProduct)
+
 
 const [products, setProducts] = useState([]);
 const [page, setPage] = useState(1);

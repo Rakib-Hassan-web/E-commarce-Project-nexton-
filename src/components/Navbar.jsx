@@ -10,6 +10,8 @@ import { RiShoppingCartLine } from "react-icons/ri";
 import AddToCart from './AddToCart';
 import { RxCross1 } from 'react-icons/rx';
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { PorductNamereducer } from '../SrcSlice';
 
 
 
@@ -24,6 +26,7 @@ const [search_Inp ,setsearch_Inp] =useState('')
 
 const [search_Rslt ,setsearch_Rslt] =useState(null)
 const navigate =useNavigate()
+const dispatch =useDispatch()
 
 
 // --------------api Fetch---------
@@ -54,8 +57,7 @@ const DataFilter =product.filter((item)=> item.category.name.toLowerCase() === s
 
 
 setsearch_Rslt(DataFilter)
-console.log(DataFilter)
-console.log(product)
+
 
 
 }
@@ -63,8 +65,9 @@ console.log(product)
 
 // -----------=product handeler------
 
-const handleProduct =()=>{
+const handleProduct =(ProNamne)=>{
 navigate('/DetailPage')
+dispatch(PorductNamereducer(ProNamne))
 }
 
 
@@ -135,7 +138,7 @@ return (
       
       search_Rslt?.map((item)=>(
 
-      <div  onClick={handleProduct} key={item.id} className='flex items-center  pl-25 justify-between px-20 mt-10'>
+      <div  onClick={()=>handleProduct(item.title)} key={item.id} className='flex items-center  pl-25 justify-between px-20 mt-10 cursor-pointer'>
 
         <div className='flex items-center gap-5'>
           <div className='w-[80px] h-[80px]   mb-3'>
