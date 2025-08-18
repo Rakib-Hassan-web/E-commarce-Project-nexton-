@@ -18,12 +18,16 @@ useEffect(() => {
 axios
 .get("https://api.escuelajs.co/api/v1/products")
 .then((res) => {
-setProducts(res.data);
+  if(!reduxProduct) return setProducts(res.data)
+
+
+    const FilterP =res.data.filter((item)=>item.title==reduxProduct)
+    setProducts(FilterP)
 })
 .catch((err) => {
 console.log(err);
 });
-}, []);
+}, [reduxProduct]);
 
 
 const navigate = useNavigate()

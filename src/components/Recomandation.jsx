@@ -5,7 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import { Link, useNavigate } from 'react-router';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { PorductNamereducer } from './slice/SrcSlice';
 
 
 const Recomandation = () => {
@@ -23,6 +24,13 @@ const Recomandation = () => {
 
 
 const [product , setprodect] =useState([])
+
+// ----------------- dispatch
+const dispatch = useDispatch()
+
+  // dispatch(PorductNamereducer(JSON.parse(localStorage.getItem('ProductKey'))))
+
+
 
 
 useEffect(()=>{
@@ -44,14 +52,21 @@ let handelShow =(INFO)=>{
 }
 
 
+
+
+
 const handlecart =(data)=>{
 
   const myArray = JSON.parse(localStorage.getItem('ProductKey')) ||  []
 
   myArray.push(data)
   localStorage.setItem( 'ProductKey' , JSON.stringify(myArray))
+  dispatch( PorductNamereducer(JSON.parse(localStorage.getItem(data))))
+
 }
 
+console.log(dispatch)
+console.log(handelShow)
 
 return (
 <>

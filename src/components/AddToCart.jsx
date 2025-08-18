@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { RxCross1 } from 'react-icons/rx'
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router'
 
 const AddToCart = ({closeCart , closeDiv}) => {

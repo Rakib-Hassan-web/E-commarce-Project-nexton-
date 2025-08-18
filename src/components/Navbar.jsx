@@ -10,8 +10,8 @@ import { RiShoppingCartLine } from "react-icons/ri";
 import AddToCart from './AddToCart';
 import { RxCross1 } from 'react-icons/rx';
 import axios from 'axios';
-import { useDispatch } from 'react-redux';
-import { PorductNamereducer } from '../SrcSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { PorductNamereducer } from './slice/SrcSlice';
 
 
 
@@ -28,6 +28,12 @@ const [search_Rslt ,setsearch_Rslt] =useState(null)
 const navigate =useNavigate()
 const dispatch =useDispatch()
 
+
+// ----------- loacl storage
+
+const reduxData = useSelector((state)=>state.Product2.value)
+
+console.log(reduxData)
 
 // --------------api Fetch---------
 const [product , setprodect] =useState([])

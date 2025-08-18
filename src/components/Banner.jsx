@@ -34,7 +34,7 @@ return (
                     className='text-second lg:text-[64px] text-[30px] font-semibold font-praymary lg:w-[632px] w-[312px] leading-[38px] lg:leading-[72px] lg:my-[24px]  mt-[8px] mb-[30px]'>
                     Exclusive collection
                     for everyone</h2>
-                <Link to={'#'}
+                <Link to={'/DetailPage'}
                     className='bg-second flex lg:gap-3 gap-2 rounded-full items-center text-white text-[14px] lg:text-[16px] font-medium font-praymary py-[12px] lg:py-[20px] lg:pl-[36px] pl-[24px] w-fit   lg:pr-[50px] pr-[19px] hover:scale-[1.1] duration-[.4s] '>
                 Explore now
                 <CiSearch className='lg:text-3xl text-2xl  ' />
