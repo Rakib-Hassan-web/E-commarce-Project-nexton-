@@ -17,30 +17,26 @@ const Footer = () => {
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[40px] md:gap-[60px] lg:gap-[80px] justify-between'>
 
             {/* ------------- First Footer Column ------------ */}
-            <div className="first_col">
-              <img src={footerlogo} alt="FooterLOGO" className='w-[119px]' />
+            <div className="first_col text-center sm:text-left">
+              <img src={footerlogo} alt="FooterLOGO" className='w-[119px] mx-auto sm:mx-0' />
 
               <div className='mt-5 space-y-4'>
-                {/* Facebook */}
-                <Link to={'#'} className='flex items-center gap-3'>
+                <Link to={'#'} className='flex items-center justify-center sm:justify-start gap-3'>
                   <FaFacebook className='text-[#4676ED] text-3xl' />
                   <h2 className='font-praymary font-normal text-base text-praymary'>Facebook</h2>
                 </Link>
 
-                {/* Youtube */}
-                <Link to={'#'} className='flex items-center gap-3'>
+                <Link to={'#'} className='flex items-center justify-center sm:justify-start gap-3'>
                   <TbBrandYoutubeFilled className='text-[#DA0000] text-3xl' />
                   <h2 className='font-praymary font-normal text-base text-praymary'>Youtube</h2>
                 </Link>
 
-                {/* Telegram */}
-                <Link to={'#'} className='flex items-center gap-3'>
+                <Link to={'#'} className='flex items-center justify-center sm:justify-start gap-3'>
                   <FaTelegram className='text-[#1c92d2] text-3xl' />
                   <h2 className='font-praymary font-normal text-base text-praymary'>Telegram</h2>
                 </Link>
 
-                {/* Twitter */}
-                <Link to={'#'} className='flex items-center gap-3'>
+                <Link to={'#'} className='flex items-center justify-center sm:justify-start gap-3'>
                   <AiFillTwitterCircle className='text-[#5A99EC] text-3xl' />
                   <h2 className='font-praymary font-normal text-base text-praymary'>Twitter</h2>
                 </Link>
@@ -48,44 +44,37 @@ const Footer = () => {
             </div>
 
             {/* ------------- Second Footer Column ------------ */}
-            <div className="SecondCol">
-              <h1 className='font-praymary font-semibold text-second text-lg pb-5 text-left'>
-                Getting started
-              </h1>
-              <div className='flex flex-col text-left space-y-3'>
-                <button className='font-praymary font-normal text-praymary text-base text-left'>Release Notes</button>
-                <button className='font-praymary font-normal text-praymary text-base text-left'>Upgrade Guide</button>
-                <button className='font-praymary font-normal text-praymary text-base text-left'>Browser Support</button>
-                <button className='font-praymary font-normal text-praymary text-base text-left'>Dark Mode</button>
+            <div className="SecondCol text-center sm:text-left">
+              <h1 className='font-praymary font-semibold text-second text-lg pb-5'>Getting started</h1>
+              <div className='flex flex-col items-center sm:items-start space-y-3'>
+                <button className='font-praymary font-normal text-praymary text-base'>Release Notes</button>
+                <button className='font-praymary font-normal text-praymary text-base'>Upgrade Guide</button>
+                <button className='font-praymary font-normal text-praymary text-base'>Browser Support</button>
+                <button className='font-praymary font-normal text-praymary text-base'>Dark Mode</button>
               </div>
             </div>
 
             {/* ------------- Third Footer Column ------------ */}
-            <div className="ThirdCOL">
-              <h1 className='font-praymary font-semibold text-second text-lg pb-5 text-left'>
-                Explore
-              </h1>
-              <div className='flex flex-col text-left space-y-3'>
-                <button className='font-praymary font-normal text-praymary text-base text-left'>Prototyping</button>
-                <button className='font-praymary font-normal text-praymary text-base text-left'>Design systems</button>
-                <button className='font-praymary font-normal text-praymary text-base text-left'>Pricing</button>
-                <button className='font-praymary font-normal text-praymary text-base text-left'>Security</button>
+            <div className="ThirdCOL text-center sm:text-left">
+              <h1 className='font-praymary font-semibold text-second text-lg pb-5'>Explore</h1>
+              <div className='flex flex-col items-center sm:items-start space-y-3'>
+                <button className='font-praymary font-normal text-praymary text-base'>Prototyping</button>
+                <button className='font-praymary font-normal text-praymary text-base'>Design systems</button>
+                <button className='font-praymary font-normal text-praymary text-base'>Pricing</button>
+                <button className='font-praymary font-normal text-praymary text-base'>Security</button>
               </div>
             </div>
 
             {/* ------------- Fourth Footer Column ------------ */}
-            <div className="FourthCOL">
-              <h1 className='font-praymary font-semibold text-second text-lg pb-5 text-left'>
-                Community
-              </h1>
-              <div className='flex flex-col text-left space-y-3'>
-                <button className='font-praymary font-normal text-praymary text-base text-left'>Discussion Forums</button>
-                <button className='font-praymary font-normal text-praymary text-base text-left'>Code of Conduct</button>
-                <button className='font-praymary font-normal text-praymary text-base text-left'>Contributing</button>
-                <button className='font-praymary font-normal text-praymary text-base text-left'>API Reference</button>
+            <div className="FourthCOL text-center sm:text-left">
+              <h1 className='font-praymary font-semibold text-second text-lg pb-5'>Community</h1>
+              <div className='flex flex-col items-center sm:items-start space-y-3'>
+                <button className='font-praymary font-normal text-praymary text-base'>Discussion Forums</button>
+                <button className='font-praymary font-normal text-praymary text-base'>Code of Conduct</button>
+                <button className='font-praymary font-normal text-praymary text-base'>Contributing</button>
+                <button className='font-praymary font-normal text-praymary text-base'>API Reference</button>
               </div>
             </div>
-
           </div>
         </div>
 
