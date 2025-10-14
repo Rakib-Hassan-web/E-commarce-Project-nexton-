@@ -78,9 +78,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* bottom border */}
-        <div className='border-t border-[#E5E7EB] mt-[54px]'></div>
-
  
       </section>
     </>
