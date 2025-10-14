@@ -7,6 +7,7 @@ import Slider from 'react-slick';
 import { Link, useNavigate } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { PorductNamereducer } from './slice/SrcSlice';
+import { DiResponsive } from 'react-icons/di';
 
 
 const Recomandation = () => {
@@ -18,8 +19,35 @@ const Recomandation = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+      DiResponsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
+  
 
 
 
@@ -71,13 +99,15 @@ console.log(handelShow)
 return (
 <>
 
-  <section id='Recomandation' className='mt-[176px]'>
+  <section id='Recomandation' className='lg:mt-[176px] mt-13 mb-5' >
 
     <div className="container">
-      <h2 className=' w-[881px]font-praymary lg:text-[36px] text-[24px] font-semibold text-second mb-[40px]'>
+      <h2 className=' w-[881px] font-praymary  lg:text-[36px] text-[24px] font-semibold text-second mb-[40px]'>
         Recommendations.
-        <span className='font-praymary lg:text-[36px] font-semibold text-praymary  '> Best matching products for
+        <span className='font-praymary lg:text-[36px] font-semibold text-praymary  hidden lg:block '> Best matching products for
           you</span>
+            {/* <h2 className='font-semibold font-praymary text-base text-second lg:hidden  pb-[24px]'>Recommendations.</h2> */}
+
       </h2>
 
 

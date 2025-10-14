@@ -36,7 +36,7 @@ return (
 
 
     <section id='addTOCart'>
-
+<h2>st</h2>
         <div onClick={closeDiv} className='w-full h-screen bg-[#00000046] absolute top-0 left-0 z-20'></div>
 
         <div className='bg-white  z-30 pt-18 w-[500px] h-screen absolute top-0 right-0'>

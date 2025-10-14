@@ -10,7 +10,7 @@ import { RiShoppingCartLine } from "react-icons/ri";
 import AddToCart from './AddToCart';
 import { RxCross1 } from 'react-icons/rx';
 import axios from 'axios';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { PorductNamereducer } from './slice/SrcSlice';
 
 
@@ -31,9 +31,7 @@ const dispatch =useDispatch()
 
 // ----------- loacl storage
 
-const reduxData = useSelector((state)=>state.Product2.value)
 
-console.log(reduxData)
 
 // --------------api Fetch---------
 const [product , setprodect] =useState([])
@@ -57,7 +55,6 @@ if(!search_Inp) return alert("Input Dosen't Be Empty ")
 
 
 
-
 const DataFilter =product.filter((item)=> item.category.name.toLowerCase() === search_Inp.toLowerCase() )
 
 
@@ -77,6 +74,7 @@ dispatch(PorductNamereducer(ProNamne))
 }
 
 
+console.log(search_Rslt)
 
 return (
 <>
@@ -137,14 +135,16 @@ return (
     {/* ------------search result---------- */}
     <div className=' pb-5 pt-2  w-[1000px] m-auto mt-5 rounded-3xl '>
       {
-        
-        search_Rslt?.length == 0?
-        <h2 className='text-3xl text-praymary font-semibold font-praymary text-center'>No Product Found!</h2>
-        :
-      
+
+      search_Rslt?.length == 0?
+      <h2 className='text-3xl text-praymary font-semibold font-praymary text-center'>No Product Found!</h2>
+      :
+
       search_Rslt?.map((item)=>(
 
-      <div  onClick={()=>handleProduct(item.title)} key={item.id} className='flex items-center  pl-25 justify-between px-20 mt-10 cursor-pointer'>
+      <div onClick={()=>handleProduct(item.title)} key={item.id} className='flex items-center pl-25 justify-between
+        px-20 mt-10 cursor-pointer'>
+         
 
         <div className='flex items-center gap-5'>
           <div className='w-[80px] h-[80px]   mb-3'>

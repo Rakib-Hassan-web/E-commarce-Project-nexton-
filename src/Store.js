@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import  SrcSlice  from './components/slice/SrcSlice'
-import  CartSlice from './components/slice/CartSlice'
+// import  PiChartPieSlice  from 'react-icons/pi'
+
 
 export default configureStore({
   reducer: {
     product:SrcSlice,
-    Product2:CartSlice,
-
+  //  product2:PiChartPieSlice
   },
 })

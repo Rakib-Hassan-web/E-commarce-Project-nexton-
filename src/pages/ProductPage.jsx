@@ -29,7 +29,7 @@ const ProductImageSlider = (cartClick) => {
 
 
 
-
+// 
 
 
 
@@ -123,3 +123,9 @@ const ProductImageSlider = (cartClick) => {
 };
 
 export default ProductImageSlider;
+
+
+
+
+
+

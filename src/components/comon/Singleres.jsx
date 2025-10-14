@@ -4,6 +4,7 @@ import { LuShoppingCart } from 'react-icons/lu'
 
 
 const Singleres = ({ pname , pprice , pimage ,prating , pacce , pdiscount ,Showdetails ,cartclick}) => {
+  
 return (
 <>
 
@@ -22,7 +23,7 @@ return (
       </button></div>
 
 
-    <div className='w-[320px] h-[448px]  rounded-[16px]   ' onClick={Showdetails}>
+    <div className='lg:w-[320px] w-full h-[448px]  flex flex-wrap  rounded-[16px]   ' onClick={Showdetails}>
 
       <div className="recoimg w-full h-[360px]  rounded-[16px] overflow-hidden mt-4  z-1 ">
         <img src={pimage} alt="product image" />
