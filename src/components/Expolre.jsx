@@ -101,7 +101,7 @@ const Expolre = () => {
                     Shop Now
                     <FaArrowRightLong className='text-xl' />
                   </Link>
-                }asfsfd
+                }
               />
             </div>
           </Slider>
