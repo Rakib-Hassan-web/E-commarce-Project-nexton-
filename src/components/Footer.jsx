@@ -81,12 +81,7 @@ const Footer = () => {
         {/* bottom border */}
         <div className='border-t border-[#E5E7EB] mt-[54px]'></div>
 
-        {/* copyright section */}
-        <div className='text-center mt-6'>
-          <p className='text-sm text-praymary font-praymary'>
-            © {new Date().getFullYear()} All Rights Reserved by <span className='text-second font-semibold'>YourBrand</span>
-          </p>
-        </div>
+ 
       </section>
     </>
   )
