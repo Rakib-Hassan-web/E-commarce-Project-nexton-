@@ -78,7 +78,8 @@ const Footer = () => {
           </div>
         </div>
 
- awerasf
+h2
+st
       </section>
     </>
   )
