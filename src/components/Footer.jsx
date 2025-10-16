@@ -78,8 +78,6 @@ const Footer = () => {
           </div>
         </div>
 
-h2
-st
       </section>
     </>
   )

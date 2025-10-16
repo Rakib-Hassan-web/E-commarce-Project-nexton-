@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom'; // ✅ fixed
-import { BsStars } from 'react-icons/bs';
+import { Link, useParams } from 'react-router-dom';
 import { HiOutlineShoppingBag } from 'react-icons/hi';
 import { HiMiniStar } from 'react-icons/hi2';
 import axios from 'axios';
-import { useLocation } from 'react-router-dom';
 
 const ProductImageSlider = (cartClick) => {
   const [product, setProduct] = useState(null);
@@ -17,7 +15,7 @@ const ProductImageSlider = (cartClick) => {
       .then((res) => {
         setProduct(res.data);
         if (res.data.images && res.data.images.length > 0) {
-          setCurrentImage(res.data.images[0]); 
+          setCurrentImage(res.data.images[0]);
         }
       })
       .catch((error) => {
@@ -25,87 +23,85 @@ const ProductImageSlider = (cartClick) => {
       });
   }, [params.ProductID]);
 
-  if (!product) return <p>Founding.......</p>; 
-
-
-
-// 
-
-
-
+  if (!product) return <p className="text-center mt-10 text-gray-500">Loading...</p>;
 
   return (
-    <section id='PRODUCT_PAGE' className="mt-10">
-      <div className="container">
-        <div className='flex gap-20'>
-          {/* Image Slider */}
-          <div className="flex">
+    <section id="PRODUCT_PAGE" className="mt-10">
+      <div className="container mx-auto px-4">
+        {/* main layout */}
+        <div className="flex flex-col lg:flex-row lg:gap-20 gap-10">
+          {/* Image Section */}
+          <div className="flex flex-col sm:flex-row lg:flex-row w-full lg:w-1/2 items-center">
             {/* Thumbnails */}
-            <div className="flex flex-col w-2/12 space-y-2 cursor-pointer">
+            <div className="flex sm:flex-col gap-2 sm:w-2/12 w-full sm:mb-0 mb-4 justify-center">
               {product.images?.map((imgSrc, i) => (
                 <img
                   key={i}
                   src={imgSrc}
                   alt={`Thumbnail ${i}`}
-                  className={`w-full object-contain ${currentImage === imgSrc ? 'border-2 border-blue-500' : ''}`}
+                  className={`object-contain w-[60px] h-[60px] sm:w-full sm:h-auto border rounded-lg cursor-pointer ${
+                    currentImage === imgSrc ? 'border-2 border-blue-500' : 'border-gray-200'
+                  }`}
                   onClick={() => setCurrentImage(imgSrc)}
                 />
               ))}
             </div>
 
-            {/* Main preview */}
-            <div className="flex-1 w-[500px] mr-[32px] ml-6">
+            {/* Main Image */}
+            <div className="flex-1 w-full sm:w-[400px] lg:w-[500px] sm:ml-4">
               <img
-                src={currentImage} proImg={product.images[0]}
+                src={currentImage}
                 alt="Product Preview"
-                className="w-full object-contain"
+                className="w-full object-contain rounded-xl"
               />
             </div>
           </div>
 
           {/* Product Info */}
-          <div>
-            <div className="InfoBorder w-[460px] h-[463px] border-[#E5E7EB] border-1 p-[33px] rounded-[16px]">
-              <div className='firstRow flex justify-between mb-8 '>
-                <div className='flex gap-1'>
-                  <HiMiniStar className='text-[#FBBF24] text-xl' />
-                  <p className='text-base text-praymary font-praymary font-semibold'>4.9 · </p>
-                  <p className=' underline text-base text-praymary font-praymary font-medium'>142 reviews</p>
+          <div className="w-full lg:w-[460px]">
+            <div className="InfoBorder border border-[#E5E7EB] p-6 rounded-2xl shadow-sm">
+              {/* Rating + Price */}
+              <div className="flex justify-between items-center mb-6">
+                <div className="flex gap-1 items-center">
+                  <HiMiniStar className="text-[#FBBF24] text-xl" />
+                  <p className="text-base text-gray-800 font-semibold">4.9 · </p>
+                  <p className="underline text-base text-gray-600 font-medium">142 reviews</p>
                 </div>
-                <div>
-                  <h2 className=' font-praymary font-semibold text-[24px] text-second'>{product.price}$</h2>
-                </div>
+                <h2 className="text-[22px] font-semibold text-gray-800">${product.price}</h2>
               </div>
 
-              {/* Size & Quantity */}
-              <div className="SEcondRow mb-8">
-                <h2 className='text-base text-second font-praymary font-semibold'>Size:
-                  <span className='text-base text-second font-praymary font-semibold'> S</span>
+              {/* Size Selection */}
+              <div className="mb-6">
+                <h2 className="text-base text-gray-800 font-semibold">
+                  Size: <span className="text-base font-medium">S</span>
                 </h2>
-                <div className="Sizes flex gap-2 mt-3">
+                <div className="flex flex-wrap gap-2 mt-3">
                   {['S', 'M', 'L', 'XL', '2XL'].map((size) => (
-                    <div key={size}
-                      className="SmallSize border border-[#E5E7EB] py-[10px] px-[30px] w-fit rounded-[12px] cursor-pointer hover:bg-[#0EA5E9] duration-[.4s] text-base text-praymary font-praymary font-semibold hover:text-white ">
-                      <h2>{size}</h2>
+                    <div
+                      key={size}
+                      className="border border-gray-200 py-2 px-5 rounded-xl cursor-pointer hover:bg-blue-500 hover:text-white text-gray-700 font-medium transition"
+                    >
+                      {size}
                     </div>
                   ))}
                 </div>
               </div>
 
-
-              {/* Quantity and Add to cart */}
-              <div className="thirdRo flex items-center justify-between">
-                <div className="quentityBg w-[110px] bg-[#F8F8F8] rounded-full py-2 px-3 flex justify-between items-center">
-                  <span className='bg-[#fff] w-[24px] h-[24px] rounded-full border border-[#E5E7EB] text-3xl flex justify-center items-center text-praymary cursor-pointer'>
-                    <p className='mb-2'>-</p>
+              {/* Quantity + Add to Cart */}
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="w-[120px] bg-[#F8F8F8] rounded-full py-2 px-3 flex justify-between items-center">
+                  <span className="bg-white w-[24px] h-[24px] rounded-full border text-lg flex justify-center items-center cursor-pointer">
+                    -
                   </span>
-                  <h2 className='text-base text-praymary font-praymary font-medium'>1</h2>
-                  <span className='bg-[#fff] w-[24px] h-[24px] rounded-full border border-[#E5E7EB] text-2xl flex justify-center items-center text-praymary cursor-pointer font-praymary'>+</span>
+                  <h2 className="text-base text-gray-700 font-medium">1</h2>
+                  <span className="bg-white w-[24px] h-[24px] rounded-full border text-lg flex justify-center items-center cursor-pointer">
+                    +
+                  </span>
                 </div>
-                <Link
-                  className="curtButton bg-second rounded-full w-fit py-4 px-8 flex items-center gap-2 shadow hover:scale-[1.2] duration-[.4s] hover:shadow-xl">
-                  <HiOutlineShoppingBag className='text-white font-semibold text-xl' />
-                  <h2 className='text-base font-medium font-praymary text-white'>Add to cart</h2>
+
+                <Link className="bg-blue-600 text-white rounded-full py-3 px-8 flex items-center gap-2 shadow hover:scale-[1.05] transition">
+                  <HiOutlineShoppingBag className="text-white text-xl" />
+                  <span className="text-sm font-medium">Add to cart</span>
                 </Link>
               </div>
             </div>
@@ -113,9 +109,13 @@ const ProductImageSlider = (cartClick) => {
         </div>
 
         {/* Product Description */}
-        <div className="mt-10">
-          <h2 className='text-[36px] text-second font-semibold font-praymary mb-1'>{product.title}</h2>
-          <p className='w-[735px] text-base text-praymary font-praymary font-normal'>{product.description}</p>
+        <div className="mt-10 text-center lg:text-left">
+          <h2 className="text-[26px] sm:text-[32px] lg:text-[36px] font-semibold text-gray-800 mb-2">
+            {product.title}
+          </h2>
+          <p className="max-w-[735px] mx-auto lg:mx-0 text-base text-gray-600">
+            {product.description}
+          </p>
         </div>
       </div>
     </section>
@@ -123,9 +123,3 @@ const ProductImageSlider = (cartClick) => {
 };
 
 export default ProductImageSlider;
-
-
-
-
-
-
