@@ -219,7 +219,28 @@ const CheckOutPage = () => {
                 </div>
               ))}
 
-              
+              <span className='w-full bg-[#E5E7EB] h-[1px] inline-block mt-[24px]'></span>
+
+              <div className='flex justify-between items-center mt-[24px]'>
+                <p className='text-[16px] font-normal font-praymary text-second '>Subtotal</p>
+                <p className='text-[16px] font-normal font-praymary text-second '>{total} $</p>
+              </div>
+
+              <div className='flex justify-between items-center mt-[8px]'>
+                <p className='text-[16px] font-normal font-praymary text-[#4B5563] '>Shipping estimate</p>
+                <p className='text-[16px] font-normal font-praymary text-[#4B5563] '>5.00$</p>
+              </div>
+
+              <div className='flex justify-between items-center mt-[8px]'>
+                <p className='text-[16px] font-normal font-praymary text-[#4B5563] '>Tax estimate</p>
+                <p className='text-[16px] font-normal font-praymary text-[#4B5563] '>24.90$</p>
+              </div>
+
+              <div className='flex justify-between items-center mt-[24px]'>
+                <p className='text-[16px] font-semibold font-praymary text-second '>Order total</p>
+                <p className='text-[16px] font-semibold font-praymary text-second '>{5 + 24.90 + total}$</p>
+              </div>
+
               <div className='mt-[24px]'>
                 <button className='w-full h-[52px] cursor-pointer bg-second rounded-full text-[16px] hover:bg-amber-300 hover:scale-110 hover:text-black duration-300 text-white font-medium font-praymary'>
                   Confirm order
