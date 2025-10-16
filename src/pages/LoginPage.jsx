@@ -60,7 +60,21 @@ const LoginPage = () => {
               </div>
 
               {/* ------Submit Button------ */}
-            count
+              <div className='mt-[24px] flex flex-col gap-[20px] sm:gap-[24px]'>
+                <button className='w-full bg-second rounded-full text-white py-[12px] sm:py-[14px] cursor-pointer text-[15px] sm:text-[16px] hover:bg-amber-300 hover:text-black hover:scale-105 duration-300'>
+                  Continue
+                </button>
+                <p className='text-Primary font-medium text-[14px] text-center'>
+                  OR
+                </p>
+                <div>
+                  <p className='text-Primary text-[14px] sm:text-base font-normal text-center'>
+                    New user?{' '}
+                    <Link
+                      className='text-[#0EA5E9] hover:underline'
+                      to={'/RegisterPage'}
+                    >
+                      Create an account
                     </Link>
                   </p>
                 </div>
