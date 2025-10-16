@@ -110,7 +110,7 @@ const ProductImageSlider = (cartClick) => {
 
         {/* Product Description */}
         <div className="mt-10 text-center lg:text-left">
-          <h2 className="text-[26px] sm:text-[32px] lg:text-[36px] font-semibold text-gray-800 mb-2">
+          <h2 className="text-[26px] sm:text-[32px] lg:text-[36px] font-praymary font-semibold text-gray-800 mb-2">
             {product.title}
           </h2>
           <p className="max-w-[735px] mx-auto lg:mx-0 text-base text-gray-600">
