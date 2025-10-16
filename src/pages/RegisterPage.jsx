@@ -169,7 +169,18 @@ const RegisterPage = () => {
               </div>
 
               {/* ------Submit Button------ */}
-          font-medium text-[14px] text-center'>OR</p>
+              <div className='mt-[24px] flex flex-col gap-[20px] sm:gap-[24px]'>
+                {loading ? (
+                  <button className='w-full bg-second rounded-full font-praymary text-white py-[12px] sm:py-[14px] cursor-progress'>
+                    Continue
+                  </button>
+                ) : (
+                  <button className='w-full bg-second rounded-full font-praymary text-white py-[12px] sm:py-[14px] cursor-pointer hover:bg-amber-300 hover:text-black hover:scale-105 duration-300'>
+                    Continue
+                  </button>
+                )}
+
+                <p className='text-Primary font-medium text-[14px] text-center'>OR</p>
                 <div>
                   <p className='text-Primary text-[14px] sm:text-base font-normal text-center'>
                     Already a member?{' '}
