@@ -312,7 +312,7 @@ return (
 
                     <div className='mt-[24px]'>
                         <button
-                            className='w-full h-[52px] cursor-pointer bg-second rounded-full text-[16px] hover:bg-amber-300 duration-300 text-white font-medium font-praymary'>Confirm
+                            className='w-full h-[52px] cursor-pointer bg-second rounded-full text-[16px] hover:bg-amber-300 hover:scale-110 hover:text-black duration-300 text-white font-medium font-praymary'>Confirm
                             order</button>
                     </div>
 
