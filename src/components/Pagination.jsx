@@ -59,5 +59,3 @@ const Pagination = ({ totalPages, currentPage, setPage }) => {
     </div>
   );
 };
-
-export default Pagination;
