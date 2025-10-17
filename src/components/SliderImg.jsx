@@ -3,7 +3,7 @@ import React from 'react'
 
 const SliderImg = () => {
   return (
-    <div>SliderImg</div>
+    <div>SliderImgsdfg  </div>
   )
 }
 
