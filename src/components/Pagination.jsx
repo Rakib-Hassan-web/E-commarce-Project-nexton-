@@ -13,58 +13,48 @@ const Pagination = ({ totalPages, currentPage, setPage }) => {
   };
 
   return (
-    <div style={{ marginTop: 20, textAlign: "center" }}>
+    <div className="mt-8 flex flex-wrap justify-center items-center gap-2 sm:gap-3">
       {/* Prev */}
       <button
         onClick={handlePrev}
         disabled={currentPage === 1}
-        style={{
-          margin: "0 5px",
-          padding: "6px 10px",
-          border: "1px solid #ccc",
-          background: "#eee",
-          cursor: "pointer",
-          opacity: currentPage === 1 ? 0.5 : 1,
-        }}
+        className={`flex items-center justify-center gap-1 px-3 py-2 border border-gray-300 rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-all duration-200 ${
+          currentPage === 1 ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
+        }`}
       >
-        <FaArrowLeft />
+        <FaArrowLeft className="text-sm" />
+        <span className="hidden sm:inline text-sm">Prev</span>
       </button>
 
-      {/* Page numbers */}
-      {pageNumbers.map((num) => (
-        <button
-          key={num}
-          onClick={() => setPage(num)}
-          style={{
-            margin: "0 3px",
-            padding: "6px 12px",
-            background: currentPage === num ? "#4B5563" : "#fff",
-            color: currentPage === num ? "#fff" : "#000",
-            border: "1px solid #ccc",
-            cursor: "pointer",
-            
-            
-          }}
-          className=" rounded-xl"
-        >
-          {num}
-        </button>
-      ))}
+      {/* Page Numbers */}
+      <div className="flex flex-wrap justify-center gap-2">
+        {pageNumbers.map((num) => (
+          <button
+            key={num}
+            onClick={() => setPage(num)}
+            className={`px-3 py-2 text-sm font-medium border rounded-lg transition-all duration-200 ${
+              currentPage === num
+                ? "bg-gray-700 text-white border-gray-700"
+                : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
+            }`}
+          >
+            {num}
+          </button>
+        ))}
+      </div>
 
       {/* Next */}
       <button
         onClick={handleNext}
         disabled={currentPage === totalPages}
-        style={{
-          margin: "0 5px",
-          padding: "6px 10px",
-          border: "1px solid #ccc",
-          background: "#eee",
-          cursor: "pointer",
-          opacity: currentPage === totalPages ? 0.5 : 1,
-        }}
+        className={`flex items-center justify-center gap-1 px-3 py-2 border border-gray-300 rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-all duration-200 ${
+          currentPage === totalPages
+            ? "opacity-50 cursor-not-allowed"
+            : "cursor-pointer"
+        }`}
       >
-        <FaArrowRight />
+        <span className="hidden sm:inline text-sm">Next</span>
+        <FaArrowRight className="text-sm" />
       </button>
     </div>
   );
