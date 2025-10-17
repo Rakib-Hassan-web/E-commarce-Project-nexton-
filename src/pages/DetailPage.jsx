@@ -154,7 +154,7 @@ const DetailPage = () => (
 
 {/* -----------rightside-------------- */}
 
-<AllProduct/>
+
 
 
 
