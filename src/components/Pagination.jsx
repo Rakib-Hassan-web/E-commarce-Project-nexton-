@@ -52,7 +52,7 @@ const Pagination = ({ totalPages, currentPage, setPage }) => {
             ? "opacity-50 cursor-not-allowed"
             : "cursor-pointer"
         }`}
-      >
+      >asdfsdf
         <span className="hidden sm:inline text-sm">Next</span>
         <FaArrowRight className="text-sm" />
       </button>
