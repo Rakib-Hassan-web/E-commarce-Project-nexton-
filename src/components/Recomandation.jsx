@@ -5,40 +5,37 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import { Link, useNavigate } from 'react-router';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { PorductNamereducer } from './slice/SrcSlice';
-import { DiResponsive } from 'react-icons/di';
-
 
 const Recomandation = () => {
 
-  // ✅ Slider Config
+  // ✅ Slider Config (responsive properly set)
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-      DiResponsive: [
+    responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1024, // tab device
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
           dots: true
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 768, // small tablet or large phone
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1
+          slidesToScroll: 1
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 480, // mobile device
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -47,104 +44,73 @@ const Recomandation = () => {
     ]
   };
 
-  
+  const [product, setProduct] = useState([]);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
+  // ✅ Fetch products
+  useEffect(() => {
+    axios.get('https://api.escuelajs.co/api/v1/products')
+      .then((res) => setProduct(res.data))
+      .catch((error) => console.error(error));
+  }, []);
 
+  // ✅ Show details
+  const handelShow = (INFO) => {
+    navigate(`/Product/${INFO.id}`);
+  }
 
-const [product , setprodect] =useState([])
+  // ✅ Add to cart
+  const handlecart = (data) => {
+    const myArray = JSON.parse(localStorage.getItem('ProductKey')) || [];
+    myArray.push(data);
+    localStorage.setItem('ProductKey', JSON.stringify(myArray));
+    dispatch(PorductNamereducer(JSON.parse(localStorage.getItem('ProductKey'))));
+  }
 
-// ----------------- dispatch
-const dispatch = useDispatch()
+  return (
+    <>
+      <section id='Recomandation' className='lg:mt-[176px] mt-10 mb-10'>
+        <div className="container mx-auto px-4">
+          
+          <h2 className='font-praymary lg:text-[36px] text-[24px] font-semibold text-second mb-[40px]'>
+            Recommendations.
+            <span className='font-praymary lg:text-[36px] font-semibold text-praymary hidden lg:block'>
+              Best matching products for you
+            </span>
+          </h2>
 
-  // dispatch(PorductNamereducer(JSON.parse(localStorage.getItem('ProductKey'))))
+          {/* ✅ Slider */}
+          <div className="slider-container">
+            <Slider {...settings}>
+              {product.map((item, i) => (
+                <Singleres
+                  key={i}
+                  cartclick={() => handlecart(item)}
+                  Showdetails={() => handelShow(item)}
+                  pimage={item.images[0]}
+                  pname={item.category?.slug}
+                  pprice={item.price}
+                  pacce={item.title}
+                />
+              ))}
+            </Slider>
+          </div>
 
+          {/* ✅ Button */}
+          <div className='mt-10 flex justify-center'>
+            <Link
+              to={'/DetailPage'}
+              className='py-4 px-10 bg-black text-base text-white font-praymary font-medium rounded-[20px]'
+            >
+              See All
+            </Link>
+          </div>
 
-
-
-useEffect(()=>{
-
-axios.get('https://api.escuelajs.co/api/v1/products')
-.then((res)=>{setprodect(res.data)})
-
-.catch((error)=>{
-})
-} ,[])
-
-
-
-
-const navigate = useNavigate()
-
-let handelShow =(INFO)=>{
-  navigate(`/Product/${INFO.id}` , )
-}
-
-
-
-
-
-const handlecart =(data)=>{
-
-  const myArray = JSON.parse(localStorage.getItem('ProductKey')) ||  []
-
-  myArray.push(data)
-  localStorage.setItem( 'ProductKey' , JSON.stringify(myArray))
-  dispatch( PorductNamereducer(JSON.parse(localStorage.getItem(data))))
-
-}
-
-console.log(dispatch)
-console.log(handelShow)
-
-return (
-<>
-
-  <section id='Recomandation' className='lg:mt-[176px] mt-13 mb-5' >
-
-    <div className="container">
-      <h2 className=' w-[881px] font-praymary  lg:text-[36px] text-[24px] font-semibold text-second mb-[40px]'>
-        Recommendations.
-        <span className='font-praymary lg:text-[36px] font-semibold text-praymary  hidden lg:block '> Best matching products for
-          you</span>
-            {/* <h2 className='font-semibold font-praymary text-base text-second lg:hidden  pb-[24px]'>Recommendations.</h2> */}
-
-      </h2>
-
-
-
- <div className="slider-container">
-                <Slider {...settings}>
-                    {
-                      product.map((item,i)=>(
-                        <Singleres cartclick={()=>handlecart(item.id)} key={i} Showdetails={()=>handelShow(item)} pimage={item.images[0]} pname={item.category.slug} pprice={item.price} pacce={item.title}/>
-                      ))
-                    }  
-                </Slider>
-            </div>
-
-
-
-
-
-      <div className='  mt-15'>
-        <Link to={'/DetailPage'}
-          className=' m-auto text-center  py-4 px-10 bg-black text-base text-white font-praymary font-medium flex justify-center items-center w-fit rounded-[20px] '>
-        See All</Link>
-     
-      </div>
-    </div>
-
-
-
-  </section>
-
-
-
-
-
-
-</>
-)
+        </div>
+      </section>
+    </>
+  )
 }
 
 export default Recomandation
