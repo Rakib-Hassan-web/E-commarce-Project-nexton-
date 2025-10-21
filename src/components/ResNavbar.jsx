@@ -59,8 +59,8 @@ return (
             <div className={` ${crossNav? 'scale-100 ' :'scale-0 '}  duration-[.6s] z-[11]  absolute w-[90%] bg-praymary top-[80px] rounded-[25px]  flex justify-center items-center p-[18px]`}>
 
                 <ul className=' flex gap-2 flex-col font-praymary text-white text-xl '>
-                  <button className=' user_icon text-2xl text-white ' id='user_icon'>
-                    <RiUserLine /></button>
+                  <Link to={'/RegisterPage'} className=' user_icon text-2xl text-white ' id='user_icon'>
+                    <RiUserLine /></Link>
                 <button className='cart_icon text-2xl text-white relative' id='cart_icon'>
                     <RiShoppingCartLine /> </button>
                 </ul>
