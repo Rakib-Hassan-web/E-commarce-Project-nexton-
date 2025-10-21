@@ -62,7 +62,7 @@ const Expolre = () => {
                 />
               </div>
             </div>
-
+{/*  */}
             {/* Women's */}
             <div className='border w-full sm:w-[360px] lg:w-[419px] p-[32px] sm:p-[36px] lg:p-[40px] rounded-[16px] border-[#E5E7EB] mx-auto'>
               <SingleExplore
