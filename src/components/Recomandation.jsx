@@ -10,35 +10,40 @@ import { PorductNamereducer } from './slice/SrcSlice';
 
 const Recomandation = () => {
 
-  // ✅ Slider Config (responsive properly set)
+  // ✅ Slider Config
   const settings = {
-    dots: true,
+    dots: true,          // default (desktop / tablet)
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    arrows: false,       // default no arrows for large devices
     responsive: [
       {
-        breakpoint: 1024, // tab device
+        breakpoint: 1024,  // tablet
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          infinite: true,
-          dots: true
+          dots: true,
+          arrows: false
         }
       },
       {
-        breakpoint: 768, // small tablet or large phone
+        breakpoint: 768,   // small tablet / large phone
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          dots: false,     // ❌ no dots on mobile
+          arrows: true     // ✅ show arrows on mobile
         }
       },
       {
-        breakpoint: 480, // mobile device
+        breakpoint: 480,   // small phone
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          dots: false,
+          arrows: true
         }
       }
     ]
@@ -58,7 +63,7 @@ const Recomandation = () => {
   // ✅ Show details
   const handelShow = (INFO) => {
     navigate(`/Product/${INFO.id}`);
-  }
+  };
 
   // ✅ Add to cart
   const handlecart = (data) => {
@@ -66,7 +71,7 @@ const Recomandation = () => {
     myArray.push(data);
     localStorage.setItem('ProductKey', JSON.stringify(myArray));
     dispatch(PorductNamereducer(JSON.parse(localStorage.getItem('ProductKey'))));
-  }
+  };
 
   return (
     <>
